@@ -1,0 +1,84 @@
+2025-10-13 12:17:58 - evalscope - INFO: Creating model Qwen2-VL-2B-Instruct with eval_type=openai_api base_url=http://127.0.0.1:8000/v1, config={'batch_size': 16, 'max_tokens': 2048, 'temperature': 0.0}, model_args={}
+2025-10-13 12:17:58 - evalscope - INFO: Dump task config to /media/william/mist2/william/Github/UDriveVLMDataset/eval_output/native/20251013_121758/configs/task_config_30e623.yaml
+2025-10-13 12:17:58 - evalscope - INFO: {
+    "model": "Qwen2-VL-2B-Instruct",
+    "model_id": "Qwen2-VL-2B-Instruct",
+    "model_args": {},
+    "model_task": "text_generation",
+    "chat_template": null,
+    "datasets": [],
+    "dataset_args": {},
+    "dataset_dir": "/home/william/.cache/modelscope/hub/datasets",
+    "dataset_hub": "modelscope",
+    "repeats": 1,
+    "generation_config": {
+        "batch_size": 16,
+        "max_tokens": 2048,
+        "temperature": 0.0
+    },
+    "eval_type": "openai_api",
+    "eval_backend": "Native",
+    "eval_config": null,
+    "limit": null,
+    "eval_batch_size": 16,
+    "use_cache": null,
+    "rerun_review": false,
+    "work_dir": "/media/william/mist2/william/Github/UDriveVLMDataset/eval_output/native/20251013_121758",
+    "ignore_errors": false,
+    "debug": false,
+    "seed": 42,
+    "api_url": "http://127.0.0.1:8000/v1",
+    "timeout": null,
+    "stream": null,
+    "judge_strategy": "auto",
+    "judge_worker_num": 1,
+    "judge_model_args": {},
+    "analysis_report": false,
+    "use_sandbox": false,
+    "sandbox_type": "docker",
+    "sandbox_manager_config": {},
+    "sandbox_config": {}
+}
+2025-10-13 12:17:58 - evalscope - ERROR: Failed to generate report table.
+2025-10-13 12:17:59 - evalscope - INFO: Finished evaluation for Qwen2-VL-2B-Instruct on []
+2025-10-13 12:17:59 - evalscope - INFO: Output directory: /media/william/mist2/william/Github/UDriveVLMDataset/eval_output/native/20251013_121758
+2025-10-13 12:17:59 - evalscope - INFO: Args: Task config is provided with TaskConfig type.
+2025-10-13 12:17:59 - evalscope - INFO: **Loading task cfg for summarizer: {
+    "model": "Qwen2-VL-2B-Instruct",
+    "model_id": "Qwen2-VL-2B-Instruct",
+    "model_args": {},
+    "model_task": "text_generation",
+    "chat_template": null,
+    "datasets": [],
+    "dataset_args": {},
+    "dataset_dir": "/home/william/.cache/modelscope/hub/datasets",
+    "dataset_hub": "modelscope",
+    "repeats": 1,
+    "generation_config": {
+        "batch_size": 16,
+        "max_tokens": 2048,
+        "temperature": 0.0
+    },
+    "eval_type": "openai_api",
+    "eval_backend": "Native",
+    "eval_config": null,
+    "limit": null,
+    "eval_batch_size": 16,
+    "use_cache": null,
+    "rerun_review": false,
+    "work_dir": "/media/william/mist2/william/Github/UDriveVLMDataset/eval_output/native/20251013_121758",
+    "ignore_errors": false,
+    "debug": false,
+    "seed": 42,
+    "api_url": "http://127.0.0.1:8000/v1",
+    "timeout": null,
+    "stream": null,
+    "judge_strategy": "auto",
+    "judge_worker_num": 1,
+    "judge_model_args": {},
+    "analysis_report": false,
+    "use_sandbox": false,
+    "sandbox_type": "docker",
+    "sandbox_manager_config": {},
+    "sandbox_config": {}
+}

@@ -1,0 +1,36 @@
+analysis_report: false
+api_url: http://127.0.0.1:8000/v1
+chat_template: null
+dataset_args: {}
+dataset_dir: /home/william/.cache/modelscope/hub/datasets
+dataset_hub: modelscope
+datasets: []
+debug: false
+eval_backend: Native
+eval_batch_size: 16
+eval_config: null
+eval_type: openai_api
+generation_config:
+  batch_size: 16
+  max_tokens: 2048
+  temperature: 0.0
+ignore_errors: false
+judge_model_args: {}
+judge_strategy: auto
+judge_worker_num: 1
+limit: null
+model: Qwen2-VL-2B-Instruct
+model_args: {}
+model_id: Qwen2-VL-2B-Instruct
+model_task: text_generation
+repeats: 1
+rerun_review: false
+sandbox_config: {}
+sandbox_manager_config: {}
+sandbox_type: docker
+seed: 42
+stream: null
+timeout: null
+use_cache: null
+use_sandbox: false
+work_dir: /media/william/mist2/william/Github/UDriveVLMDataset/eval_output/native/20251013_121758
