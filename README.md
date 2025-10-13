@@ -15,17 +15,34 @@ summaries and the original JSON annotations.
 - `configs/qwen_dataset.yaml` – Default configuration for running the converter.
 - `utils/qwen_custom_dataset.py` – Core script that builds the ms-swift friendly
   dataset.
+- `scripts/train_qwen2vl.sh` – Helper for LoRA fine-tuning with ms-swift.
+- `scripts/infer_qwen2vl_image.py` – Batched inference utility that uses the
+  fine-tuned checkpoint.
+
+## Environment Setup
+
+1. Create a Python environment (3.8+; examples use 3.10):
+   ```bash
+   conda create -n ms-swift python=3.10 -y
+   conda activate ms-swift
+   ```
+2. Install ms-swift from the bundled checkout:
+   ```bash
+   cd ms-swift
+   pip install -e .
+   cd ..
+   ```
+3. Install dataset utilities:
+   ```bash
+   pip install pyyaml
+   ```
 
 ## Prerequisites
 
-- Python 3.8+ (tested with 3.10)
-- `PyYAML` for reading configuration files
-
-Install the Python dependency if needed:
-
-```bash
-pip install pyyaml
-```
+- CUDA-capable GPUs with sufficient VRAM (tested on 4×24 GiB cards).
+- Driving dataset arranged as `dataset/train/images` and `dataset/train/labels`
+  with JSON labels matching `dataset/Overall.json`.
+- Adequate disk space for generated JSONL files and ms-swift checkpoints.
 
 ## Running the Converter
 
@@ -107,30 +124,45 @@ Once `train_qwen.jsonl` is ready you can launch LoRA fine-tuning through the
 helper script in `scripts/train_qwen2vl.sh`. The script wraps the `swift sft`
 CLI and exposes key hyperparameters via environment variables.
 
-1. Install ms-swift (from this checkout):
-   ```bash
-   cd ms-swift
-   pip install -e .
-   ```
-2. Create an output directory and run the training script from the repository
-   root:
+1. From the repository root:
    ```bash
    chmod +x scripts/train_qwen2vl.sh    # one-time
-   CUDA_VISIBLE_DEVICES=0 \
-   MODEL_NAME=Qwen/Qwen2-VL-2B-Instruct \
+   CUDA_VISIBLE_DEVICES=0,1,2,3 \
+   MAX_PIXELS=1003520 \
+   MAX_LENGTH=4096 \
    scripts/train_qwen2vl.sh
    ```
+   The script downloads the base `Qwen/Qwen2-VL-2B-Instruct` model, applies LoRA
+   tuning, and logs progress to `output/qwen2vl_lora/...`.
+2. Override key settings as needed before the command:
+   - `DATASET_PATH` – Path to the generated JSONL (defaults to
+     `dataset/train_qwen.jsonl`).
+   - `OUTPUT_DIR` – Checkpoint destination (defaults to `output/qwen2vl_lora`).
+   - `NUM_TRAIN_EPOCHS`, `LEARNING_RATE`, `GRADIENT_ACCUMULATION_STEPS`, etc.
+   - `FREEZE_VIT=false` if you also want to fine-tune the visual encoder.
+   - `SAVE_STEPS` / `EVAL_STEPS` to adjust checkpoint cadence.
 
-Important environment variables:
+By default the script enables LoRA on the language model while freezing the
+visual encoder, uses bfloat16, and reserves 2% of the data for validation via
+`--split_dataset_ratio`.
 
-- `DATASET_PATH` – Set this if you generated an alternative JSONL location.
-- `OUTPUT_DIR` – Where checkpoints and logs are stored (defaults to
-  `output/qwen2vl_lora`).
-- `MAX_PIXELS` – The image resolution budget forwarded to the VLM preprocessor.
-- `MAX_LENGTH` – Context window for tokenized samples (defaults to `4096`; increase if you keep the long prompt + JSON output).
-- `NUM_TRAIN_EPOCHS`, `LEARNING_RATE`, `GRADIENT_ACCUMULATION_STEPS`, etc. –
-  Override default hyperparameters as needed.
+## Inference
 
-By default the script enables LoRA, freezes the visual encoder, and allocates
-2% of the dataset to validation via `--split_dataset_ratio`. Adjust any of the
-exported environment variables to tailor the run to your hardware budget.
+After training, run inference across a folder of test images with
+`scripts/infer_qwen2vl_image.py`. The script loads the LoRA checkpoint (defaults
+to the latest under `output/qwen2vl_lora/.../checkpoint-1911`), applies the
+original prompts from `configs/qwen_dataset.yaml`, and writes outputs per image.
+
+```bash
+python scripts/infer_qwen2vl_image.py
+```
+
+- Input folder: `dataset/test/` (customize by editing
+  `IMAGE_DIR` inside the script).
+- Output: `output/qwen2vl_lora/<run>/inference_output/<image-name>.txt` contains
+  the natural-language summary; `<image-name>.json` holds the structured
+  analysis in the training schema. Console logs also show inference latency per
+  frame.
+
+To point at a different LoRA checkpoint or dataset, adjust `RUN_DIR`,
+`ADAPTER_DIR`, or `IMAGE_DIR` at the top of the script before running.
