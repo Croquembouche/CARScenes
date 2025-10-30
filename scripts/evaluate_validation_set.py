@@ -101,6 +101,18 @@ def parse_args() -> argparse.Namespace:
         default=OUTPUT_DIR,
         help="Directory to write evaluation summary.",
     )
+    parser.add_argument(
+        "--batch-size",
+        type=int,
+        default=4,
+        help="Number of samples to batch per inference call.",
+    )
+    parser.add_argument(
+        "--max-new-tokens",
+        type=int,
+        default=512,
+        help="Maximum tokens to generate per sample.",
+    )
     args = parser.parse_args()
     if args.limit.lower() == "none":
         args.limit = None
@@ -128,6 +140,10 @@ def strip_loss(messages: Iterable[Dict]) -> List[Dict]:
         cleaned.append({"role": msg["role"], "content": msg["content"]})
     return cleaned
 
+def unwrap_single(value):
+    if isinstance(value, list):
+        return value[0] if value else None
+    return value
 
 def parse_json_from_text(text: str) -> Optional[Dict]:
     candidate = text.strip()
@@ -179,6 +195,7 @@ def to_set(value) -> List[str]:
     return cleaned
 
 
+
 def main() -> None:
     parsed = parse_args()
     parsed.output_dir.mkdir(parents=True, exist_ok=True)
@@ -190,7 +207,7 @@ def main() -> None:
     engine = PtEngine.from_model_template(model, template)
 
     data = load_dataset(parsed.val_file, limit=parsed.limit)
-    config = RequestConfig(max_tokens=512, temperature=0.0)
+    config = RequestConfig(max_tokens=parsed.max_new_tokens, temperature=0.0)
 
     scalar_stats = {field: {"correct": 0, "total": 0} for field in SCALAR_FIELDS}
     list_stats = {field: {"tp": 0, "fp": 0, "fn": 0, "support": 0} for field in LIST_FIELDS}
@@ -198,115 +215,135 @@ def main() -> None:
     severity_pred: List[float] = []
     exact_matches = 0
 
-    sample_reports = []
-    failures = []
+    sample_reports: List[Dict] = []
+    failures: List[Dict] = []
 
-    for idx, item in enumerate(data):
-        messages = strip_loss(item["messages"])
-        image_entries = item.get("images", [])
-        image_paths = [entry.get("path") for entry in image_entries if entry.get("path")]
-        if not image_paths:
-            failures.append({"index": idx, "reason": "No image path"})
-            continue
+    batch_requests: List[InferRequest] = []
+    batch_meta: List[Dict] = []
 
-        request = InferRequest(messages=messages, images=image_paths)
-        start = time.time()
-        try:
-            response = engine.infer([request], config)[0].choices[0].message.content
-        except Exception as exc:  # pylint: disable=broad-except
-            failures.append({"index": idx, "reason": f"Inference failure: {exc}"})
-            continue
-        latency = time.time() - start
+    def flush_batch():
+        nonlocal batch_requests, batch_meta, exact_matches
+        if not batch_requests:
+            return
+        start_time = time.time()
+        responses = engine.infer(batch_requests, config)
+        elapsed = time.time() - start_time
+        per_latency = elapsed / len(batch_requests)
 
-        pred_json = parse_json_from_text(response)
-        gt_json = parse_json_from_text(messages[-1]["content"])
-
-        if gt_json is None:
-            failures.append({"index": idx, "reason": "Ground-truth JSON parse failure"})
-            continue
-        if pred_json is None:
-            failures.append({"index": idx, "reason": "Prediction JSON parse failure"})
-            continue
-
-        sample_report = {
-            "index": idx,
-            "image": image_paths[0],
-            "latency_sec": latency,
-            "correct_fields": [],
-            "incorrect_fields": {},
-            "scalar_values": {},
-            "list_values": {},
-        }
-
-        is_exact = True
-
-        # Scalar fields
-        for field in SCALAR_FIELDS:
-            gt_value = get_nested(gt_json, field)
-            pred_value = get_nested(pred_json, field)
-            if gt_value is None:
+        for meta, response in zip(batch_meta, responses):
+            pred_json = parse_json_from_text(response.choices[0].message.content)
+            if pred_json is None:
+                failures.append({"index": meta["index"], "reason": "Prediction JSON parse failure"})
                 continue
-            scalar_stats[field]["total"] += 1
 
-            sample_report["scalar_values"][ ".".join(field) ] = {
-                "pred": pred_value,
-                "gt": gt_value,
+            gt_json = meta["gt_json"]
+            sample_report = {
+                "index": meta["index"],
+                "image": meta["image"],
+                "latency_sec": per_latency,
+                "correct_fields": [],
+                "incorrect_fields": {},
+                "scalar_values": {},
+                "list_values": {},
             }
 
-            gt_norm = normalize_scalar(gt_value)
-            pred_norm = normalize_scalar(pred_value)
-            if gt_norm == pred_norm:
-                scalar_stats[field]["correct"] += 1
-                sample_report["correct_fields"].append(".".join(field))
-            else:
-                is_exact = False
-                sample_report["incorrect_fields"][".".join(field)] = {
+            is_exact = True
+
+            for field in SCALAR_FIELDS:
+                gt_value = unwrap_single(get_nested(gt_json, field))
+                pred_value = unwrap_single(get_nested(pred_json, field))
+                if gt_value is None:
+                    continue
+                scalar_stats[field]["total"] += 1
+
+                sample_report["scalar_values"][".".join(field)] = {
                     "pred": pred_value,
                     "gt": gt_value,
                 }
 
-            if field == ("Severity",) and gt_value is not None:
-                try:
-                    severity_true.append(float(gt_value))
-                    severity_pred.append(float(pred_value))
-                except (TypeError, ValueError):
-                    pass
+                gt_norm = normalize_scalar(gt_value)
+                pred_norm = normalize_scalar(pred_value)
+                if gt_norm == pred_norm:
+                    scalar_stats[field]["correct"] += 1
+                    sample_report["correct_fields"].append(".".join(field))
+                else:
+                    is_exact = False
+                    sample_report["incorrect_fields"][".".join(field)] = {
+                        "pred": pred_value,
+                        "gt": gt_value,
+                    }
 
-        # List fields
-        for field in LIST_FIELDS:
-            gt_value = get_nested(gt_json, field)
-            pred_value = get_nested(pred_json, field)
-            if gt_value is None:
-                continue
+                if field == ("Severity",) and gt_value is not None:
+                    try:
+                        severity_true.append(float(gt_value))
+                        severity_pred.append(float(pred_value))
+                    except (TypeError, ValueError):
+                        pass
 
-            gt_set = set(to_set(gt_value))
-            pred_set = set(to_set(pred_value))
-            sample_report["list_values"][".".join(field)] = {
-                "pred": sorted(pred_set),
-                "gt": sorted(gt_set),
-            }
-            tp = len(gt_set & pred_set)
-            fp = len(pred_set - gt_set)
-            fn = len(gt_set - pred_set)
+            for field in LIST_FIELDS:
+                gt_value = get_nested(gt_json, field)
+                pred_value = get_nested(pred_json, field)
+                if gt_value is None:
+                    continue
 
-            list_stats[field]["tp"] += tp
-            list_stats[field]["fp"] += fp
-            list_stats[field]["fn"] += fn
-            list_stats[field]["support"] += len(gt_set)
+                gt_set = set(to_set(gt_value))
+                pred_set = set(to_set(pred_value))
 
-            if fp == 0 and fn == 0:
-                sample_report["correct_fields"].append(".".join(field))
-            else:
-                is_exact = False
-                sample_report["incorrect_fields"][".".join(field)] = {
+                sample_report["list_values"][".".join(field)] = {
                     "pred": sorted(pred_set),
                     "gt": sorted(gt_set),
                 }
 
-        if is_exact:
-            exact_matches += 1
+                tp = len(gt_set & pred_set)
+                fp = len(pred_set - gt_set)
+                fn = len(gt_set - pred_set)
 
-        sample_reports.append(sample_report)
+                list_stats[field]["tp"] += tp
+                list_stats[field]["fp"] += fp
+                list_stats[field]["fn"] += fn
+                list_stats[field]["support"] += len(gt_set)
+
+                if fp == 0 and fn == 0:
+                    sample_report["correct_fields"].append(".".join(field))
+                else:
+                    is_exact = False
+                    sample_report["incorrect_fields"][".".join(field)] = {
+                        "pred": sorted(pred_set),
+                        "gt": sorted(gt_set),
+                    }
+
+            if is_exact:
+                exact_matches += 1
+            sample_reports.append(sample_report)
+
+        batch_requests = []
+        batch_meta = []
+
+    for idx, item in enumerate(data):
+        messages = strip_loss(item.get("messages", []))
+        if not messages:
+            failures.append({"index": idx, "reason": "Missing messages"})
+            continue
+        image_entries = item.get("images", [])
+        image_paths: List[str] = []
+        for entry in image_entries:
+            if isinstance(entry, str):
+                image_paths.append(entry)
+            elif isinstance(entry, dict):
+                image_paths.append(entry.get("path", ""))
+        gt_json = parse_json_from_text(messages[-1]["content"])
+        if gt_json is None:
+            failures.append({"index": idx, "reason": "Ground-truth JSON parse failure"})
+            continue
+
+        request = InferRequest(messages=messages, images=image_paths)
+        batch_requests.append(request)
+        batch_meta.append({"index": idx, "image": image_paths[0] if image_paths else "", "gt_json": gt_json})
+
+        if len(batch_requests) >= parsed.batch_size:
+            flush_batch()
+
+    flush_batch()
 
     total_samples = len(sample_reports)
 
@@ -315,13 +352,11 @@ def main() -> None:
     for field, stats in scalar_stats.items():
         total = stats["total"]
         accuracy = stats["correct"] / total if total else None
-        scalar_metrics.append(
-            {
-                "field": ".".join(field),
-                "total": total,
-                "accuracy": accuracy,
-            }
-        )
+        scalar_metrics.append({
+            "field": ".".join(field),
+            "total": total,
+            "accuracy": accuracy,
+        })
 
     list_metrics = []
     for field, stats in list_stats.items():
@@ -334,17 +369,15 @@ def main() -> None:
             f1 = 2 * precision * recall / (precision + recall)
         else:
             f1 = None
-        list_metrics.append(
-            {
-                "field": ".".join(field),
-                "support": stats["support"],
-                "precision": precision,
-                "recall": recall,
-                "f1": f1,
-                "false_positives": fp,
-                "false_negatives": fn,
-            }
-        )
+        list_metrics.append({
+            "field": ".".join(field),
+            "support": stats["support"],
+            "precision": precision,
+            "recall": recall,
+            "f1": f1,
+            "false_positives": fp,
+            "false_negatives": fn,
+        })
 
     severity_metrics = {}
     if severity_true and severity_pred:
@@ -395,7 +428,6 @@ def main() -> None:
         print(f"  MAE: {severity_metrics['mae']:.4f}")
         print(f"  RMSE: {severity_metrics['rmse']:.4f}")
 
-    # Show a few mismatches for quick inspection.
     print("\nExamples of mismatches:")
     mismatches = [r for r in sample_reports if r["incorrect_fields"]]
     for report in mismatches[:5]:

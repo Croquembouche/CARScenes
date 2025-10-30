@@ -166,3 +166,24 @@ python scripts/infer_qwen2vl_image.py
 
 To point at a different LoRA checkpoint or dataset, adjust `RUN_DIR`,
 `ADAPTER_DIR`, or `IMAGE_DIR` at the top of the script before running.
+
+
+Annotations & schema: CC BY 4.0 © 2025 [the CAR Lab @ UD].
+
+Code: MIT © 2025 [the CAR Lab @ UD].
+
+Images:
+
+Cityscapes © Cityscapes authors, no redistribution; see license. 
+cityscapes-dataset.com
+
+KITTI © KITTI authors, CC BY-NC-SA 3.0. 
+cvlibs.net
+
+Argoverse © Argo AI, CC BY-NC-SA 4.0 (+ privacy). 
+argoverse.github.io
+
+nuScenes © Motional, non-commercial; commercial license available. 
+nuscenes.org
+
+Note: This is practical guidance, not legal advice. When in doubt (esp. for nuScenes redistribution), email the dataset owners and keep their response on file.
