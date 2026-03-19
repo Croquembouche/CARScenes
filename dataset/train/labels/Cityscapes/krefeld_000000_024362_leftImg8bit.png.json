@@ -5,25 +5,24 @@
   "RoadConditions": "Dry",
   "LaneInformation": {
     "NumberOfLanes": "NoLane",
-    "LaneMarkings": "Not Visible",
+    "LaneMarkings": "LaneNotVisible",
     "SpecialLanes": [
       "Street Parking"
     ]
   },
   "TrafficSigns": {
     "TrafficSignsTypes": [
-      "No Parking",
-      "Emergency Route"
+      "No Parking"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "Van",
       "Sedan",
       "Hatchback"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+    ],
     "InMotion": [
       "False"
     ],

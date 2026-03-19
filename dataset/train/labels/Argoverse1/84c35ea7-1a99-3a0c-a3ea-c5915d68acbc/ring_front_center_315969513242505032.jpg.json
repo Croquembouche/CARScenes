@@ -14,15 +14,15 @@
     "TrafficSignsTypes": [
       "NoTrafficSigns"
     ],
-    "TrafficSignsVisibility": "Not Clearly Visible",
+    "TrafficSignsVisibility": "SignNotVisible"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "Sedan",
       "SUV",
       "Utility Truck"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+    ],
     "InMotion": [
       "True"
     ],
@@ -34,15 +34,15 @@
     "NoPed"
   ],
   "Directionality": "Two-Way",
-  "Ego-Vehicle": {
-    "Direction": "Forward",
-    "Maneuver": "Moving"
-  },
   "Visibility": {
     "General": "Reduced",
     "SpecificImpairments": [
-      "Camera glare"
+      "Camera Glare"
     ]
+  },
+  "Ego-Vehicle": {
+    "Direction": "EgoForward",
+    "Maneuver": "EgoMoving"
   },
   "CameraCondition": "Clear",
   "Severity": 4

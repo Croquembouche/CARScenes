@@ -11,20 +11,20 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Red",
     "TrafficSignsTypes": [
       "Traffic Light",
       "Parking Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Red"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "Sedan",
       "SUV",
       "Commercial Delivery Truck"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+    ],
     "InMotion": [
       "False"
     ],

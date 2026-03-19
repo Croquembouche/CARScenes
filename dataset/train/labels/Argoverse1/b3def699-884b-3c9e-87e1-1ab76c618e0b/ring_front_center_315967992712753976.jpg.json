@@ -12,20 +12,20 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Green",
     "TrafficSignsTypes": [
       "No Parking",
       "Traffic Light"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Green"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "SUV",
       "Sedan",
       "Pickup Truck"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+    ],
     "InMotion": [
       "False"
     ],
@@ -38,12 +38,15 @@
     "Crossing Street"
   ],
   "Directionality": "One-Way",
-  "Ego-Vehicle": {
-    "Direction": "Forward",
-    "Maneuver": "Moving"
-  },
   "Visibility": {
-    "General": "Good"
+    "General": "Good",
+    "SpecificImpairments": [
+      "NoImpairments"
+    ]
+  },
+  "Ego-Vehicle": {
+    "Direction": "EgoForward",
+    "Maneuver": "EgoMoving"
   },
   "CameraCondition": "Clear",
   "Severity": 2

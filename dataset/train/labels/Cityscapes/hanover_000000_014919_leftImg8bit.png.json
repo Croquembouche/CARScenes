@@ -4,7 +4,7 @@
   "Weather": "Overcast",
   "RoadConditions": "Wet",
   "LaneInformation": {
-    "NumberOfLanes": "Two",
+    "NumberOfLanes": "2",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "Tram Tracks",
@@ -12,18 +12,18 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Red",
     "TrafficSignsTypes": [
       "Traffic Light",
       "Yield Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "SUV"
-    ]
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Red"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "SUV"
+    ],
     "InMotion": [
       "True"
     ],

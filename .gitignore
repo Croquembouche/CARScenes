@@ -1,1 +1,11 @@
-paper/
+tmp/
+audit_outputs/
+runs/
+scripts/__pycache__/
+
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/CARScenes_NIPS.pdf

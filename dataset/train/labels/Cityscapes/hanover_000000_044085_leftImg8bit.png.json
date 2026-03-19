@@ -14,14 +14,14 @@
     "TrafficSignsTypes": [
       "Speed Limit"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Sedan",
-      "Hatchback"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Sedan",
+      "Hatchback"
+    ],
     "InMotion": [
       "True"
     ],

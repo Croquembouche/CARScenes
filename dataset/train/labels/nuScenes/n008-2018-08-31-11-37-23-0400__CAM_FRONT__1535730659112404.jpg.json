@@ -4,7 +4,7 @@
   "Weather": "Clear",
   "RoadConditions": "Dry",
   "LaneInformation": {
-    "NumberOfLanes": "One",
+    "NumberOfLanes": "1",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "Road Work"
@@ -15,14 +15,14 @@
       "Detour",
       "Route Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Truck",
-      "SUV"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Truck",
+      "SUV"
+    ],
     "InMotion": [
       "True"
     ],

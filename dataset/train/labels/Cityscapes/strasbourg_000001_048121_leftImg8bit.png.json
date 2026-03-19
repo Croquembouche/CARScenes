@@ -4,7 +4,7 @@
   "Weather": "Clear",
   "RoadConditions": "Dry",
   "LaneInformation": {
-    "NumberOfLanes": "One",
+    "NumberOfLanes": "1",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "Street Parking",
@@ -17,16 +17,16 @@
       "Yield Sign",
       "No Parking"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "Van",
       "Sedan",
       "SUV",
       "Hatchback"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+    ],
     "InMotion": [
       "False"
     ],
@@ -37,10 +37,6 @@
   "Pedestrians": [
     "Visible on Sidewalk"
   ],
-  "Bicyclist": {
-    "Presence": "True",
-    "Location": "In Bike Lane"
-  },
   "Directionality": "One-Way",
   "Visibility": {
     "General": "Good",

@@ -7,22 +7,22 @@
     "NumberOfLanes": "MultipleLanes",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
-      "Tram Lane"
+      "Tram Tracks"
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "In Transition(TwoState)",
     "TrafficSignsTypes": [
       "Traffic Light",
       "Directional Arrow"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Sedan"
-    ]
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "In Transition(TwoState)"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Sedan"
+    ],
     "InMotion": [
       "True"
     ],
@@ -31,12 +31,8 @@
     ]
   },
   "Pedestrians": [
-    "Visible in Distance"
+    "NoPed"
   ],
-  "Bicyclist": {
-    "Presence": "True",
-    "Location": "On Roadside"
-  },
   "Directionality": "Two-Way",
   "Visibility": {
     "General": "Good",

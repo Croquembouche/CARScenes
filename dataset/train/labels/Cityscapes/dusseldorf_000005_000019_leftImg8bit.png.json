@@ -12,20 +12,20 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Red",
     "TrafficSignsTypes": [
       "Traffic Light",
       "No Parking"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Red"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "Sedan",
       "Van",
       "Hatchback"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+    ],
     "InMotion": [
       "True"
     ],
@@ -35,7 +35,7 @@
     ]
   },
   "Pedestrians": [
-    "Crossing Road"
+    "NoPed"
   ],
   "Directionality": "Two-Way",
   "Visibility": {
@@ -45,7 +45,7 @@
     ]
   },
   "Ego-Vehicle": {
-    "Direction": "EgoStopped at Traffic Light",
+    "Direction": "EgoStopped at Intersection",
     "Maneuver": "EgoWaiting"
   },
   "CameraCondition": "Clear",

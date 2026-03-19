@@ -12,17 +12,17 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Green",
     "TrafficSignsTypes": [
       "Traffic Light"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Commercial Vehicle"
-    ]
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Green"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Commercial Vehicle"
+    ],
     "InMotion": [
       "False"
     ],
@@ -33,10 +33,6 @@
   "Pedestrians": [
     "MultiplePed"
   ],
-  "Animals": {
-    "Type": "Dog",
-    "State": "On Sidewalk"
-  },
   "Directionality": "Two-Way",
   "Visibility": {
     "General": "Good",

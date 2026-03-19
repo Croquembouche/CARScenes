@@ -4,26 +4,26 @@
   "Weather": "Partly Cloudy",
   "RoadConditions": "Dry",
   "LaneInformation": {
-    "NumberOfLanes": "Three",
+    "NumberOfLanes": "3",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "Bike Lane"
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Green",
     "TrafficSignsTypes": [
       "Traffic Light"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Green"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "Sedan",
       "SUV",
       "Van"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+    ],
     "InMotion": [
       "True"
     ],

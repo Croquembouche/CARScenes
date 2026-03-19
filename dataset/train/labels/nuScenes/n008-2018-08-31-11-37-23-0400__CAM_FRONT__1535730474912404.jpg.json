@@ -11,17 +11,17 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Green",
     "TrafficSignsTypes": [
       "Traffic Light"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "SUV"
-    ]
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Green"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "SUV"
+    ],
     "InMotion": [
       "False"
     ],
@@ -30,7 +30,7 @@
     ]
   },
   "Pedestrians": [
-    "Visible on Crosswalk"
+    "Crossing Street"
   ],
   "Directionality": "Two-Way",
   "Visibility": {

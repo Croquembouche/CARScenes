@@ -11,19 +11,19 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Red",
     "TrafficSignsTypes": [
       "Traffic Light"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Red"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "Sedan",
       "Police Car",
       "Truck"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+    ],
     "InMotion": [
       "False"
     ],
@@ -35,15 +35,15 @@
     "NoPed"
   ],
   "Directionality": "Two-Way",
-  "Ego-Vehicle": {
-    "Direction": "EgoStopped at Intersection",
-    "Maneuver": "EgoWaiting"
-  },
   "Visibility": {
     "General": "Good",
     "SpecificImpairments": [
       "NoImpairments"
     ]
+  },
+  "Ego-Vehicle": {
+    "Direction": "EgoStopped at Intersection",
+    "Maneuver": "EgoWaiting"
   },
   "CameraCondition": "Clear",
   "Severity": 4

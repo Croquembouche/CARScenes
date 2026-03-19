@@ -12,20 +12,20 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Green",
     "TrafficSignsTypes": [
       "Traffic Light",
       "Directional Arrow",
       "Bike Lane Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Sedan",
-      "Hatchback"
-    ]
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Green"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Sedan",
+      "Hatchback"
+    ],
     "InMotion": [
       "True"
     ],

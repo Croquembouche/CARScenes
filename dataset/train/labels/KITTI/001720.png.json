@@ -12,20 +12,19 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": null,
     "TrafficSignsTypes": [
       "No Parking",
       "Railroad Crossing"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "Sedan",
       "Hatchback",
       "Tram"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+    ],
     "InMotion": [
       "False"
     ],
@@ -37,10 +36,6 @@
   "Pedestrians": [
     "NoPed"
   ],
-  "Bicyclist": {
-    "Presence": "True",
-    "Location": "On Sidewalk"
-  },
   "Directionality": "Two-Way",
   "Visibility": {
     "General": "Good",

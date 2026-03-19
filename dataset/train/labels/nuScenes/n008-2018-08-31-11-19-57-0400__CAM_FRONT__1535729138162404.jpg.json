@@ -4,7 +4,7 @@
   "Weather": "Clear",
   "RoadConditions": "Dry",
   "LaneInformation": {
-    "NumberOfLanes": "Two",
+    "NumberOfLanes": "2",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "Traffic Cones Blocking Parts of the Road",
@@ -16,15 +16,15 @@
       "No Parking",
       "Road Work"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "Construction Vehicles",
       "Truck",
       "Sedan"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+    ],
     "InMotion": [
       "False"
     ],

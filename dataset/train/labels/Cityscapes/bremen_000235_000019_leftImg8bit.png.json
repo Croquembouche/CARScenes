@@ -4,7 +4,7 @@
   "Weather": "Overcast",
   "RoadConditions": "Dry",
   "LaneInformation": {
-    "NumberOfLanes": "Two",
+    "NumberOfLanes": "2",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "Street Parking"
@@ -14,15 +14,15 @@
     "TrafficSignsTypes": [
       "Keep Right Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "Van",
       "Sedan",
       "Hatchback"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+    ],
     "InMotion": [
       "True"
     ],

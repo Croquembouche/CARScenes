@@ -15,15 +15,15 @@
     "TrafficSignsTypes": [
       "NoTrafficSigns"
     ],
-    "TrafficSignsVisibility": "SignNotVisible",
+    "TrafficSignsVisibility": "SignNotVisible"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "Sedan",
       "SUV",
       "Pickup Truck"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+    ],
     "InMotion": [
       "False"
     ],
@@ -36,15 +36,15 @@
     "Visible on Sidewalk"
   ],
   "Directionality": "Two-Way",
-  "Ego-Vehicle": {
-    "Direction": "Forward",
-    "Maneuver": "In Queue"
-  },
   "Visibility": {
     "General": "Good",
     "SpecificImpairments": [
       "NoImpairments"
     ]
+  },
+  "Ego-Vehicle": {
+    "Direction": "EgoForward",
+    "Maneuver": "EgoIn Queue"
   },
   "CameraCondition": "Clear",
   "Severity": 4

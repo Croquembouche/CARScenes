@@ -7,7 +7,7 @@
     "NumberOfLanes": "MultipleLanes",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
-      "Divided"
+      "NoSpecialLanes"
     ]
   },
   "TrafficSigns": {
@@ -15,15 +15,15 @@
       "No Parking",
       "Directional Arrow"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "Sedan",
       "Hatchback",
       "Station Wagon"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+    ],
     "InMotion": [
       "True"
     ],

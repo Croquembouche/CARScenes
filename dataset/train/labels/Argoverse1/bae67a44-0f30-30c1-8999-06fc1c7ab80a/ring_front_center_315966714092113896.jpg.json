@@ -14,14 +14,14 @@
     "TrafficSignsTypes": [
       "Road Closed"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Sedan",
-      "Pickup Truck"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Sedan",
+      "Pickup Truck"
+    ],
     "InMotion": [
       "False"
     ],
@@ -33,12 +33,15 @@
     "NoPed"
   ],
   "Directionality": "Two-Way",
-  "Ego-Vehicle": {
-    "Direction": "Approaching Intersection",
-    "Maneuver": "Slowing Down"
-  },
   "Visibility": {
-    "General": "Good"
+    "General": "Good",
+    "SpecificImpairments": [
+      "NoImpairments"
+    ]
+  },
+  "Ego-Vehicle": {
+    "Direction": "EgoApproaching Intersection",
+    "Maneuver": "EgoSlowing Down"
   },
   "CameraCondition": "Clear",
   "Severity": 2

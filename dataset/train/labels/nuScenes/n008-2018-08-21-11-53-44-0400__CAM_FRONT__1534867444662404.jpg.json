@@ -4,26 +4,26 @@
   "Weather": "Overcast",
   "RoadConditions": "Dry",
   "LaneInformation": {
-    "NumberOfLanes": "Three",
+    "NumberOfLanes": "3",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "Street Parking"
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Red",
     "TrafficSignsTypes": [
       "Traffic Light"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Red"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "Sedan",
       "SUV",
       "Cars"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+    ],
     "InMotion": [
       "False"
     ],
@@ -35,15 +35,15 @@
     "Visible on Sidewalk"
   ],
   "Directionality": "Two-Way",
-  "Ego-Vehicle": {
-    "Direction": "EgoForward",
-    "Maneuver": "EgoIn Queue"
-  },
   "Visibility": {
     "General": "Good",
     "SpecificImpairments": [
       "NoImpairments"
     ]
+  },
+  "Ego-Vehicle": {
+    "Direction": "EgoForward",
+    "Maneuver": "EgoIn Queue"
   },
   "CameraCondition": "Clear",
   "Severity": 4

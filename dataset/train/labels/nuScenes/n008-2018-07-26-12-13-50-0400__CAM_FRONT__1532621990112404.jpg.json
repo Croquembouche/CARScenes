@@ -5,7 +5,7 @@
   "RoadConditions": "Dry",
   "LaneInformation": {
     "NumberOfLanes": "MultipleLanes",
-    "LaneMarkings": "Lane Not Clearly Visible",
+    "LaneMarkings": "LaneNotClearlyVisible",
     "SpecialLanes": [
       "NoSpecialLanes"
     ]
@@ -14,15 +14,15 @@
     "TrafficSignsTypes": [
       "NoTrafficSigns"
     ],
-    "TrafficSignsVisibility": "SignNotVisible",
+    "TrafficSignsVisibility": "SignNotVisible"
+  },
+  "Vehicles": {
+    "TotalNumber": "Few",
     "VehicleTypes": [
       "Utility Truck",
       "Commercial Delivery Truck",
       "Sedan"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "Few",
+    ],
     "InMotion": [
       "False"
     ],
@@ -34,15 +34,15 @@
     "NoPed"
   ],
   "Directionality": "Multi-directional with median",
-  "Ego-Vehicle": {
-    "Direction": "EgoForward",
-    "Maneuver": "EgoMoving"
-  },
   "Visibility": {
     "General": "Good",
     "SpecificImpairments": [
       "NoImpairments"
     ]
+  },
+  "Ego-Vehicle": {
+    "Direction": "EgoForward",
+    "Maneuver": "EgoMoving"
   },
   "CameraCondition": "Clear",
   "Severity": 2

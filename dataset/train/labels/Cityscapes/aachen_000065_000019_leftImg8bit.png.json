@@ -1,49 +1,30 @@
 {
-  "Scene": [
-    "Urban",
-    "Intersection"
-  ],
-  "TimeOfDay": [
-    "Daytime"
-  ],
-  "Weather": [
-    "Overcast"
-  ],
-  "RoadConditions": [
-    "Dry"
-  ],
+  "Scene": "Intersection",
+  "TimeOfDay": "Daytime",
+  "Weather": "Overcast",
+  "RoadConditions": "Dry",
   "LaneInformation": {
-    "NumberOfLanes": [
-      "Multiple"
-    ],
-    "LaneMarkings": [
-      "Visible"
-    ],
+    "NumberOfLanes": "MultipleLanes",
+    "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "Bike Lane",
       "Crosswalk"
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": [
-      "Red"
-    ],
     "TrafficSignsTypes": [
       "Traffic Light",
       "Pedestrian Signal",
       "Yield Sign"
     ],
-    "TrafficSignsVisibility": [
-      "Visible"
-    ],
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Red"
+  },
+  "Vehicles": {
+    "TotalNumber": "Few",
     "VehicleTypes": [
       "Ambulance",
       "Sedan"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": [
-      "Few"
     ],
     "InMotion": [
       "False"
@@ -55,37 +36,9 @@
   "Pedestrians": [
     "Crossing Street"
   ],
-  "Policeman": {
-    "Presence": [
-      "False"
-    ],
-    "States": [
-      "None"
-    ]
-  },
-  "Bicyclist": {
-    "Presence": [
-      "False"
-    ],
-    "Location": [
-      "None"
-    ]
-  },
-  "Animals": {
-    "Type": [
-      "None"
-    ],
-    "State": [
-      "None"
-    ]
-  },
-  "Directionality": [
-    "Two-Way"
-  ],
+  "Directionality": "Two-Way",
   "Visibility": {
-    "General": [
-      "Good"
-    ],
+    "General": "Good",
     "SpecificImpairments": [
       "NoImpairments"
     ]
@@ -94,8 +47,6 @@
     "Direction": "EgoStopped at Intersection",
     "Maneuver": "EgoFullStopped"
   },
-  "CameraCondition": [
-    "Clear"
-  ],
+  "CameraCondition": "Clear",
   "Severity": 7
 }

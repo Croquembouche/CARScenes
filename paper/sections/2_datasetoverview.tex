@@ -1,0 +1,63 @@
+\section{Dataset Overview}
+\label{sec:dataset}
+
+\subsection{Sources, Frame Selection, and Scope}
+CARScenes augments four existing autonomous-driving datasets with schema-aligned, scene-level annotations. The current canonical release contains \textbf{5,192} front-camera frames from \textbf{Argoverse1} (\textbf{834}), \textbf{Cityscapes} (\textbf{595}), \textbf{KITTI} (\textbf{749}), and \textbf{nuScenes} (\textbf{3,014}). We release annotations, schema files, split manifests, and benchmark utilities only; original imagery remains governed by the licenses of the source datasets.
+
+Version 1 includes every front-camera frame for which the annotation pipeline produced a parseable label and the release builder could align image and label basenames. We therefore do not claim a corpus-level balancing strategy over scene types or times of day. Instead, we preserve the heterogeneity of the source datasets and introduce balance only when constructing the public development and audit splits.
+
+\subsection{Knowledge Base and Benchmark Core}
+\label{sec:schema}
+
+CARScenes was designed for structured scene understanding rather than free-form captioning. The benchmark core keeps the fields that are already used throughout the paper and that can be validated consistently across sources. These fields cover environment, road geometry, traffic control, background-vehicle behavior, ego-vehicle behavior, vulnerable road users, sensor condition, and a discrete \texttt{Severity} label. Auxiliary keys found in the raw annotations (e.g., bicyclists, animals, and policemen) are preserved as side information in the canonical release but are not part of the headline benchmark until they are fully normalized and audited.
+
+\subsection{Schema Derivation}
+The schema was derived from three constraints. First, the fields had to support scenario mining across heterogeneous source datasets rather than within a single benchmark. Second, they had to align with scene descriptors that matter in driving-language work and scenario specification, including infrastructure, road geometry, visibility, agent composition, and ego context \cite{RefWorks:sima2024drivelm,RefWorks:qian2024nuscenesqa,RefWorks:rivera2025scenario,RefWorks:fremont2019scenic,RefWorks:kung2024riskbench}. Third, they had to be inferable, at least approximately, from a single front-camera frame. This third constraint intentionally excludes action targets, control outputs, and long-horizon behavioral intent; CARScenes is a scene-understanding benchmark, not a driving-policy benchmark.
+
+\subsection{Benchmark Fields}
+\begin{table}[t]
+\scriptsize
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{>{\raggedleft\arraybackslash}m{.33\linewidth}|>{\centering\arraybackslash}m{.61\linewidth}}
+\toprule
+\textbf{Group} & \textbf{Fields (benchmark core)} \\
+\midrule
+\makecell[r]{Environment} &
+\makecell[c]{Scene \\ TimeOfDay \\ Weather \\ RoadConditions} \\
+\midrule
+\makecell[r]{Road Geometry \& \\ Infrastructure} &
+\makecell[c]{LaneInformation.NumberOfLanes \\ LaneInformation.LaneMarkings \\ LaneInformation.SpecialLanes \\ Directionality} \\
+\midrule
+\makecell[r]{Traffic Control} &
+\makecell[c]{TrafficSigns.TrafficSignsTypes \\ TrafficSigns.TrafficSignsVisibility \\ TrafficSigns.TrafficLightState} \\
+\midrule
+\makecell[r]{Background Vehicles} &
+\makecell[c]{Vehicles.TotalNumber \\ Vehicles.VehicleTypes \\ Vehicles.InMotion \\ Vehicles.States} \\
+\midrule
+\makecell[r]{Ego Context} &
+\makecell[c]{Ego-Vehicle.Direction \\ Ego-Vehicle.Maneuver} \\
+\midrule
+\makecell[r]{Vulnerable Road Users} &
+\makecell[c]{Pedestrians} \\
+\midrule
+\makecell[r]{Visibility \& Sensor} &
+\makecell[c]{Visibility.General \\ Visibility.SpecificImpairments \\ CameraCondition \\ Severity} \\
+\bottomrule
+\end{tabular}
+\caption{Benchmark fields retained in the canonical CARScenes v1 release.}
+\label{tab:kb_overview}
+\end{table}
+
+\subsection{Severity as a Scene-Level Difficulty Signal}
+CARScenes attaches a bounded integer \texttt{Severity} in the range \([1,10]\) to each frame. We use severity as a coarse scene-level difficulty signal rather than as a collision-risk or control label. The score reflects visible factors that plausibly make scene understanding harder or more consequential, including scene complexity, traffic-control ambiguity, visibility degradation, crowdedness, and the presence of vulnerable road users or anomalies. The design goal is interpretability: severity is intended for stratified evaluation and failure slicing, not as a surrogate for downstream driving policy quality.
+
+\subsection{Canonical Record Format}
+The canonical release stores one record per frame in JSONL. Metadata fields such as \texttt{\_id}, \texttt{\_source}, and \texttt{\_image\_relpath} are prefixed with underscores so that benchmark labels remain easy to read and programmatically stable. The machine-readable schema included in the release defines all scalar and list-valued fields used by the evaluator.
+
+\subsection{Annotation Workflow and Human Correction}
+CARScenes uses a VLM-assisted annotation workflow only as a first pass. Initial labels are generated automatically, after which a human annotator reviews every record field-by-field and corrects any wrong labels before release. The benchmark should therefore be interpreted as a set of fully human-corrected annotations rather than as raw model predictions. This distinction matters for the NeurIPS Datasets and Benchmarks track: the contribution is not a VLM labeling demo, but a released benchmark whose final records were manually checked and corrected.
+
+\subsection{Annotation and Canonicalization}
+The released benchmark is defined by the canonicalization pass rather than by the raw JSON dumps. Canonicalization happens after human correction and is intended to normalize schema drift without changing the intended semantic content of the annotations. The release builder normalizes enum drift, moves misplaced fields into their benchmark locations, removes wrapper files, logs unmatched image/label pairs, and emits a stable schema for the resulting JSONL file. This step is essential because the raw annotations contain legacy field variants and auxiliary keys that are useful for auditing but unsuitable for a headline benchmark without cleanup.

@@ -14,13 +14,13 @@
     "TrafficSignsTypes": [
       "Do Not Enter"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "SUV"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "SUV"
+    ],
     "InMotion": [
       "False"
     ],
@@ -31,10 +31,6 @@
   "Pedestrians": [
     "MultiplePed"
   ],
-  "Bicyclist": {
-    "Presence": "True",
-    "Location": "On Sidewalk"
-  },
   "Directionality": "Roundabout",
   "Visibility": {
     "General": "Good",

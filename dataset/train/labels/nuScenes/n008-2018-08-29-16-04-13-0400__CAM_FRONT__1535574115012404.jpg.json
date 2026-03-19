@@ -4,7 +4,7 @@
   "Weather": "Clear",
   "RoadConditions": "Dry",
   "LaneInformation": {
-    "NumberOfLanes": "Two",
+    "NumberOfLanes": "2",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "Crosswalk"
@@ -12,16 +12,15 @@
   },
   "TrafficSigns": {
     "TrafficSignsTypes": [
-      "Yield Sign",
-      "No Truck Allowed"
+      "Yield Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Truck"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Truck"
+    ],
     "InMotion": [
       "False"
     ],

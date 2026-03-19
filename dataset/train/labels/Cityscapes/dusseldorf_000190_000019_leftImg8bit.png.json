@@ -16,14 +16,14 @@
       "No Parking",
       "Information Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "SUV",
-      "Hatchback"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "SUV",
+      "Hatchback"
+    ],
     "InMotion": [
       "False"
     ],

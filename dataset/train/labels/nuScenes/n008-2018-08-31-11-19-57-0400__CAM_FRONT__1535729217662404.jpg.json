@@ -4,28 +4,28 @@
   "Weather": "Clear",
   "RoadConditions": "Dry",
   "LaneInformation": {
-    "NumberOfLanes": "Two",
+    "NumberOfLanes": "2",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "Crosswalk"
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Red",
     "TrafficSignsTypes": [
       "Traffic Light",
       "No Turn On Red"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Red"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "SUV",
       "Sedan",
       "Van",
       "Delivery Truck"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+    ],
     "InMotion": [
       "True"
     ],
@@ -37,10 +37,6 @@
   "Pedestrians": [
     "NoPed"
   ],
-  "Bicyclist": {
-    "Presence": "True",
-    "Location": "Crossing Street"
-  },
   "Directionality": "Two-Way",
   "Visibility": {
     "General": "Good",

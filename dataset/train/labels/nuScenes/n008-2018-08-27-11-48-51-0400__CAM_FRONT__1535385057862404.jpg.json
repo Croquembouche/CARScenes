@@ -4,7 +4,7 @@
   "Weather": "Clear",
   "RoadConditions": "Dry",
   "LaneInformation": {
-    "NumberOfLanes": "Two",
+    "NumberOfLanes": "2",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "Road Work"
@@ -14,14 +14,14 @@
     "TrafficSignsTypes": [
       "NoTrafficSigns"
     ],
-    "TrafficSignsVisibility": "SignNotVisible",
-    "VehicleTypes": [
-      "Cars",
-      "Construction Vehicles"
-    ]
+    "TrafficSignsVisibility": "SignNotVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Cars",
+      "Construction Vehicles"
+    ],
     "InMotion": [
       "False"
     ],
@@ -32,17 +32,17 @@
   "Pedestrians": [
     "NoPed"
   ],
-  "Ego-Vehicle": {
-    "Direction": "EgoForward",
-    "Maneuver": "EgoMoving"
-  },
+  "Directionality": "Two-Way",
   "Visibility": {
     "General": "Good",
     "SpecificImpairments": [
       "NoImpairments"
     ]
   },
-  "Directionality": "Two-Way",
+  "Ego-Vehicle": {
+    "Direction": "EgoForward",
+    "Maneuver": "EgoMoving"
+  },
   "CameraCondition": "Clear",
   "Severity": 3
 }

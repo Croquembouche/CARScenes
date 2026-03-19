@@ -12,20 +12,20 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Red",
     "TrafficSignsTypes": [
       "Traffic Light",
       "Bus Stop Sign",
       "Bike Lane Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Sedan",
-      "SUV"
-    ]
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Red"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Sedan",
+      "SUV"
+    ],
     "InMotion": [
       "True"
     ],
@@ -36,10 +36,6 @@
   "Pedestrians": [
     "Waiting at Bus Stop"
   ],
-  "Bicyclist": {
-    "Presence": "True",
-    "Location": "In Bike Lane"
-  },
   "Directionality": "Two-Way",
   "Visibility": {
     "General": "Good",

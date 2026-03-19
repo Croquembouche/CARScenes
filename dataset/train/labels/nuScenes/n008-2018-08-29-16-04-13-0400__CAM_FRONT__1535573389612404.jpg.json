@@ -14,14 +14,14 @@
     "TrafficSignsTypes": [
       "Work Zone"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "SUV",
-      "Sedan"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "SUV",
+      "Sedan"
+    ],
     "InMotion": [
       "True"
     ],
@@ -34,15 +34,15 @@
     "MultiplePed"
   ],
   "Directionality": "Two-Way",
-  "Ego-Vehicle": {
-    "Direction": "EgoForward",
-    "Maneuver": "EgoMoving"
-  },
   "Visibility": {
     "General": "Good",
     "SpecificImpairments": [
       "NoImpairments"
     ]
+  },
+  "Ego-Vehicle": {
+    "Direction": "EgoForward",
+    "Maneuver": "EgoMoving"
   },
   "CameraCondition": "Clear",
   "Severity": 3

@@ -4,7 +4,7 @@
   "Weather": "Clear",
   "RoadConditions": "Dry",
   "LaneInformation": {
-    "NumberOfLanes": "Two",
+    "NumberOfLanes": "2",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "Crosswalk"
@@ -15,13 +15,13 @@
       "Pedestrian Crossing",
       "Height Limit"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Hatchback"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Hatchback"
+    ],
     "InMotion": [
       "False"
     ],

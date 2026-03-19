@@ -14,13 +14,13 @@
     "TrafficSignsTypes": [
       "NoTrafficSigns"
     ],
-    "TrafficSignsVisibility": "SignNotVisible",
-    "VehicleTypes": [
-      "Sedan"
-    ]
+    "TrafficSignsVisibility": "SignNotVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Sedan"
+    ],
     "InMotion": [
       "True"
     ],

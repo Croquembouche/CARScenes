@@ -11,21 +11,21 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Red",
     "TrafficSignsTypes": [
       "Traffic Light",
       "Yield Sign",
       "Directional Arrow"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Red"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "Sedan",
       "Truck",
       "Bus"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+    ],
     "InMotion": [
       "True"
     ],
@@ -44,7 +44,7 @@
     ]
   },
   "Ego-Vehicle": {
-    "Direction": "EgoStopped at Traffic Light",
+    "Direction": "EgoStopped at Intersection",
     "Maneuver": "EgoWaiting"
   },
   "CameraCondition": "Clear",

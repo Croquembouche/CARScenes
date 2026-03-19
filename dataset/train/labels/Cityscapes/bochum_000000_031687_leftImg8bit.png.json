@@ -1,5 +1,5 @@
 {
-  "Scene": "Roundabout",
+  "Scene": "Intersection",
   "TimeOfDay": "Daytime",
   "Weather": "Overcast",
   "RoadConditions": "Dry",
@@ -16,13 +16,13 @@
       "Directional Arrow",
       "Pedestrian Crossing"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Bus"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Bus"
+    ],
     "InMotion": [
       "True"
     ],

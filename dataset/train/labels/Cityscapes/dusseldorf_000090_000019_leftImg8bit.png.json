@@ -12,20 +12,20 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Red",
     "TrafficSignsTypes": [
       "Traffic Light",
       "Yield Sign",
       "Directional Arrow"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Sedan",
-      "Tram"
-    ]
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Red"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Sedan",
+      "Tram"
+    ],
     "InMotion": [
       "True"
     ],

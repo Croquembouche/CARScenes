@@ -14,14 +14,14 @@
     "TrafficSignsTypes": [
       "No Parking"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Sedan",
-      "SUV"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Sedan",
+      "SUV"
+    ],
     "InMotion": [
       "True"
     ],
@@ -32,10 +32,6 @@
   "Pedestrians": [
     "Visible on Sidewalk"
   ],
-  "Bicyclist": {
-    "Presence": "True",
-    "Location": "On Sidewalk"
-  },
   "Directionality": "Two-Way",
   "Visibility": {
     "General": "Good",

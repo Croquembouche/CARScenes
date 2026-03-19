@@ -6,23 +6,25 @@
   "LaneInformation": {
     "NumberOfLanes": "MultipleLanes",
     "LaneMarkings": "LaneVisible",
-    "SpecialLanes": []
+    "SpecialLanes": [
+      "NoSpecialLanes"
+    ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Green",
     "TrafficSignsTypes": [
       "Traffic Light",
       "Yield Sign",
       "No U-Turn",
       "Parking Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Sedan"
-    ]
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Green"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Sedan"
+    ],
     "InMotion": [
       "False"
     ],

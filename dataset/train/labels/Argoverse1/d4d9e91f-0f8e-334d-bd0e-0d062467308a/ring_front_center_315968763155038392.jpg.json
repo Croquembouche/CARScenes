@@ -4,7 +4,7 @@
   "Weather": "Overcast",
   "RoadConditions": "Dry",
   "LaneInformation": {
-    "NumberOfLanes": "Three",
+    "NumberOfLanes": "3",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "Street Parking"
@@ -15,15 +15,15 @@
       "Speed Limit",
       "No Left Turn"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Bus",
-      "Sedan",
-      "Vans"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Bus",
+      "Sedan",
+      "Van"
+    ],
     "InMotion": [
       "False"
     ],
@@ -36,12 +36,15 @@
     "NoPed"
   ],
   "Directionality": "Two-Way",
-  "Ego-Vehicle": {
-    "Direction": "Forward",
-    "Maneuver": "Waiting"
-  },
   "Visibility": {
-    "General": "Good"
+    "General": "Good",
+    "SpecificImpairments": [
+      "NoImpairments"
+    ]
+  },
+  "Ego-Vehicle": {
+    "Direction": "EgoForward",
+    "Maneuver": "EgoWaiting"
   },
   "CameraCondition": "Clear",
   "Severity": 1

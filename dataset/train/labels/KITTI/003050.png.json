@@ -12,19 +12,19 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Red",
     "TrafficSignsTypes": [
       "Traffic Light",
       "No Parking",
       "Pedestrian Crossing"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Sedan"
-    ]
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Red"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Sedan"
+    ],
     "InMotion": [
       "False"
     ],
@@ -35,10 +35,6 @@
   "Pedestrians": [
     "Crossing Street"
   ],
-  "Bicyclist": {
-    "Presence": "True",
-    "Location": "Crossing Road"
-  },
   "Directionality": "Two-Way",
   "Visibility": {
     "General": "Good",

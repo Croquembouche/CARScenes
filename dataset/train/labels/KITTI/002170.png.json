@@ -8,7 +8,7 @@
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "Tram Tracks",
-      "Bus Lane"
+      "Taxi and Bus Lane"
     ]
   },
   "TrafficSigns": {
@@ -16,15 +16,15 @@
       "Bus Stop Sign",
       "Speed Limit"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "Sedan",
       "Hatchback",
       "Bus"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+    ],
     "InMotion": [
       "True"
     ],

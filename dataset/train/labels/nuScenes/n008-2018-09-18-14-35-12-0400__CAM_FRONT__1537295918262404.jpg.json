@@ -4,7 +4,7 @@
   "Weather": "Rainy",
   "RoadConditions": "Wet",
   "LaneInformation": {
-    "NumberOfLanes": "Two",
+    "NumberOfLanes": "2",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "Bike Lane"
@@ -14,19 +14,13 @@
     "TrafficSignsTypes": [
       "Stop Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "NoVehicleType"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "NoVehicle",
-    "InMotion": [
-      "False"
-    ],
-    "States": [
-      "NoVehicleState"
-    ]
+    "VehicleTypes": [],
+    "InMotion": [],
+    "States": []
   },
   "Pedestrians": [
     "NoPed"

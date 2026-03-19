@@ -1,0 +1,45 @@
+\section{Release and Benchmark Protocol}
+\label{sec:release}
+
+\subsection{Annotation-Only Release}
+CARScenes v1 is released as an annotation-only benchmark. The release directory contains the canonical JSONL file, a machine-readable schema, split manifests, benchmark subset files, benchmark slice definitions, Croissant metadata, and validation/evaluation scripts. This choice avoids re-licensing or re-hosting upstream images while still making the benchmark reproducible for researchers who already have access to the source datasets. For a NeurIPS Datasets and Benchmarks submission, the relevant contribution is therefore the annotation layer, schema, and executable benchmark interface, not the original images.
+
+The public repository for the project is \url{https://github.com/Croquembouche/CARScenes}. This is the reviewer-facing location for the codebase and release materials referenced throughout the paper.
+
+\subsection{Fixed Splits}
+We freeze three public split roles in the current release:
+\begin{itemize}
+  \item \textbf{Train} (\textbf{4,592} records): used for model fitting.
+  \item \textbf{Silver-dev-500} (\textbf{500} records): used for model selection and pilot calibration only.
+  \item \textbf{Gold-test-100} (\textbf{100} records): a fixed, balanced held-out split for headline evaluation.
+\end{itemize}
+The silver development split is balanced across the four sources (\textbf{125} records per source). The gold test split is also source-balanced (\textbf{25} records per source) and was selected to emphasize severity diversity, adverse conditions, vulnerable road users, and traffic-light scenes. We additionally reserve a \textbf{25}-record agreement subset inside the gold test split for secondary spot-checking and future inter-annotator studies.
+
+\subsection{Benchmark Tasks}
+The benchmark covers scalar categorical fields, list-valued fields, and the discrete \texttt{Severity} label. Scalar fields are scored with exact-match accuracy. List-valued fields are scored with micro-averaged precision, recall, and F1. Severity is treated both as an exact-match classification target and as an ordinal score via MAE, RMSE, and quadratic weighted kappa. We also define fixed scenario slices for data-centric analysis, including night-or-dusk with rain, vulnerable road users at intersections, traffic lights under higher severity, poor visibility with parked vehicles, and roundabout scenes with multiple vehicles.
+
+\subsection{Utility Slices}
+\begin{table}[t]
+    \centering
+    \caption{Fixed utility slices shipped with CARScenes v1. Counts are measured on the full canonical release.}
+    \label{tab:utility_slices}
+    \begin{tabular}{lp{0.42\linewidth}r}
+        \toprule
+        Slice & Query intent & Count \\
+        \midrule
+        Night/dusk + rain & adverse lighting and weather & 28 \\
+        VRU + intersection & interaction-heavy urban scenes & 115 \\
+        Traffic light + high severity & controlled but difficult scenes & 71 \\
+        Poor visibility + parked vehicles & clutter under degraded observation & 1\,323 \\
+        Roundabout + multiple vehicles & rare geometric interaction case & 12 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+These slices are the practical reason to use CARScenes. They are not recoverable from a single source metadata field, and they make it possible to report whether a model fails in particular contextual situations instead of only reporting an overall score.
+
+\subsection{Current Benchmark Status}
+The present repository implements the benchmark interface and freezes human-corrected split manifests. The released records are not provisional: a human annotator reviewed and corrected the labels before release, and canonicalization then enforced schema consistency on those corrected records. Accordingly, \texttt{silver-dev-500} is reserved for model selection, while \texttt{gold-test-100} is the held-out split intended for headline evaluation.
+
+\subsection{Why This Benchmark Matters}
+The point of CARScenes is not just to attach more labels to existing images. The release is useful because it makes failure slicing explicit and reproducible. A researcher can evaluate one model or many models on the same scene schema, then ask where those models fail under adverse visibility, around traffic control, in crowded scenes, or under higher semantic difficulty. This is the practical unit of analysis that is missing from the original source datasets and from most free-form driving-VLM evaluations.

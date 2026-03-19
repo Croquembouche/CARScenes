@@ -11,21 +11,21 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Red",
     "TrafficSignsTypes": [
       "Street Sign",
       "Traffic Light",
       "Construction Warning"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Red"
+  },
+  "Vehicles": {
+    "TotalNumber": "Few",
     "VehicleTypes": [
       "Sedan",
       "Pickup Truck",
       "Taxi"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "Few",
+    ],
     "InMotion": [
       "True"
     ],

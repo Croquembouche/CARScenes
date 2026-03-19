@@ -15,14 +15,14 @@
     "TrafficSignsTypes": [
       "Street Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Sedan",
-      "Hatchback"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Sedan",
+      "Hatchback"
+    ],
     "InMotion": [
       "True"
     ],
@@ -33,10 +33,6 @@
   "Pedestrians": [
     "Visible on Sidewalk"
   ],
-  "Bicyclist": {
-    "Presence": "True",
-    "Location": "In Vehicle Lane"
-  },
   "Directionality": "Two-Way",
   "Visibility": {
     "General": "Good",

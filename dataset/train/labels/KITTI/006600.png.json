@@ -5,7 +5,7 @@
   "RoadConditions": "Dry",
   "LaneInformation": {
     "NumberOfLanes": "NoLane",
-    "LaneMarkings": "Not Visible",
+    "LaneMarkings": "LaneNotVisible",
     "SpecialLanes": [
       "Street Parking"
     ]
@@ -15,14 +15,14 @@
       "No Parking",
       "Street Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Sedan",
-      "Minivan"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Sedan",
+      "Minivan"
+    ],
     "InMotion": [
       "False"
     ],

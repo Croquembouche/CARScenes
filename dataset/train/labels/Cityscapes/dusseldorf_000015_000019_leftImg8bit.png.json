@@ -4,8 +4,8 @@
   "Weather": "Overcast",
   "RoadConditions": "Dry",
   "LaneInformation": {
-    "NumberOfLanes": "Single",
-    "LaneMarkings": "Not Visible",
+    "NumberOfLanes": "1",
+    "LaneMarkings": "LaneNotVisible",
     "SpecialLanes": [
       "NoSpecialLanes"
     ]
@@ -14,14 +14,14 @@
     "TrafficSignsTypes": [
       "No Parking"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Hatchback",
-      "Sedan"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Hatchback",
+      "Sedan"
+    ],
     "InMotion": [
       "False"
     ],
@@ -30,12 +30,8 @@
     ]
   },
   "Pedestrians": [
-    "Walking on Sidewalk"
+    "Visible on Sidewalk"
   ],
-  "Animals": {
-    "Type": "Dog",
-    "State": "On Sidewalk"
-  },
   "Directionality": "Two-Way",
   "Visibility": {
     "General": "Good",

@@ -11,22 +11,20 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": [
-      "Green"
-    ],
     "TrafficSignsTypes": [
       "Traffic Light",
       "Railroad Crossing"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Green"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "Sedan",
       "SUV",
       "Bus"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+    ],
     "InMotion": [
       "True"
     ],
@@ -39,15 +37,15 @@
     "NoPed"
   ],
   "Directionality": "Two-Way",
-  "Ego-Vehicle": {
-    "Direction": "Forward",
-    "Maneuver": "Moving"
-  },
   "Visibility": {
     "General": "Good",
     "SpecificImpairments": [
-      "Camera glare"
+      "Camera Glare"
     ]
+  },
+  "Ego-Vehicle": {
+    "Direction": "EgoForward",
+    "Maneuver": "EgoMoving"
   },
   "CameraCondition": "Glare",
   "Severity": 2

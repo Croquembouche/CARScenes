@@ -4,7 +4,7 @@
   "Weather": "Clear",
   "RoadConditions": "Dry",
   "LaneInformation": {
-    "NumberOfLanes": "Two",
+    "NumberOfLanes": "2",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "Crosswalk"
@@ -14,13 +14,13 @@
     "TrafficSignsTypes": [
       "Pedestrian Crossing"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Cars"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Cars"
+    ],
     "InMotion": [
       "False"
     ],
@@ -31,17 +31,17 @@
   "Pedestrians": [
     "Crossing Street"
   ],
-  "Ego-Vehicle": {
-    "Direction": "EgoForward",
-    "Maneuver": "EgoSlowing Down"
-  },
+  "Directionality": "Two-Way",
   "Visibility": {
     "General": "Good",
     "SpecificImpairments": [
       "NoImpairments"
     ]
   },
-  "Directionality": "Two-Way",
+  "Ego-Vehicle": {
+    "Direction": "EgoForward",
+    "Maneuver": "EgoSlowing Down"
+  },
   "CameraCondition": "Clear",
   "Severity": 4
 }

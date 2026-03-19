@@ -4,8 +4,8 @@
   "Weather": "Clear",
   "RoadConditions": "Dry",
   "LaneInformation": {
-    "NumberOfLanes": "Two",
-    "LaneMarkings": "Lane Not Clearly Visible",
+    "NumberOfLanes": "2",
+    "LaneMarkings": "LaneNotClearlyVisible",
     "SpecialLanes": [
       "Road Work",
       "Street Parking"
@@ -17,14 +17,14 @@
       "Detour",
       "Pedestrian Crossing"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Pickup Truck",
-      "Commercial Delivery Truck"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Pickup Truck",
+      "Commercial Delivery Truck"
+    ],
     "InMotion": [
       "True"
     ],
@@ -37,15 +37,15 @@
     "MultiplePed"
   ],
   "Directionality": "One-Way",
-  "Ego-Vehicle": {
-    "Direction": "EgoApproaching Intersection",
-    "Maneuver": "EgoSlowing Down"
-  },
   "Visibility": {
     "General": "Good",
     "SpecificImpairments": [
       "NoImpairments"
     ]
+  },
+  "Ego-Vehicle": {
+    "Direction": "EgoApproaching Intersection",
+    "Maneuver": "EgoSlowing Down"
   },
   "CameraCondition": "Clear",
   "Severity": 4

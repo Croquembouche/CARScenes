@@ -14,33 +14,27 @@
     "TrafficSignsTypes": [
       "No Left Turn"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "NoVehicleType"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "NoVehicle",
-    "InMotion": [
-      "False"
-    ],
-    "States": [
-      "NoVehicleState"
-    ]
+    "VehicleTypes": [],
+    "InMotion": [],
+    "States": []
   },
   "Pedestrians": [
     "NoPed"
   ],
   "Directionality": "One-Way",
-  "Ego-Vehicle": {
-    "Direction": "EgoForward",
-    "Maneuver": "EgoMoving"
-  },
   "Visibility": {
     "General": "Good",
     "SpecificImpairments": [
       "NoImpairments"
     ]
+  },
+  "Ego-Vehicle": {
+    "Direction": "EgoForward",
+    "Maneuver": "EgoMoving"
   },
   "CameraCondition": "Clear",
   "Severity": 3

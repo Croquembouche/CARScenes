@@ -5,7 +5,7 @@
   "RoadConditions": "Dry",
   "LaneInformation": {
     "NumberOfLanes": "NoLane",
-    "LaneMarkings": "Lane Not Clearly Visible",
+    "LaneMarkings": "LaneNotClearlyVisible",
     "SpecialLanes": [
       "Tram Tracks"
     ]
@@ -16,15 +16,15 @@
       "No Parking",
       "Street Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible"
+  },
+  "Vehicles": {
+    "TotalNumber": "Few",
     "VehicleTypes": [
       "Van",
       "Hatchback",
       "Motorcycle"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "Few",
+    ],
     "InMotion": [
       "False"
     ],

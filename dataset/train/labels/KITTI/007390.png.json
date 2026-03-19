@@ -14,14 +14,14 @@
     "TrafficSignsTypes": [
       "Information Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Sedan",
-      "Van"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Sedan",
+      "Van"
+    ],
     "InMotion": [
       "True"
     ],

@@ -15,18 +15,18 @@
       "Parking Sign",
       "Exit Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "Sedan",
       "SUV",
       "Station Wagon",
       "Van",
       "Truck",
-      "Trailer"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+      "Semi-Trailer Truck"
+    ],
     "InMotion": [
       "True"
     ],

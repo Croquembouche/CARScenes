@@ -4,8 +4,8 @@
   "Weather": "Overcast",
   "RoadConditions": "Dry",
   "LaneInformation": {
-    "NumberOfLanes": "One",
-    "LaneMarkings": "Lane Not Clearly Visible",
+    "NumberOfLanes": "1",
+    "LaneMarkings": "LaneNotClearlyVisible",
     "SpecialLanes": [
       "NoSpecialLanes"
     ]
@@ -14,14 +14,14 @@
     "TrafficSignsTypes": [
       "Road Work"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Semi-Trailer Truck",
-      "Truck"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Semi-Trailer Truck",
+      "Truck"
+    ],
     "InMotion": [
       "False"
     ],
@@ -33,15 +33,15 @@
     "NoPed"
   ],
   "Directionality": "Unknown",
-  "Ego-Vehicle": {
-    "Direction": "EgoForward",
-    "Maneuver": "EgoMoving"
-  },
   "Visibility": {
     "General": "Reduced",
     "SpecificImpairments": [
       "Shadows"
     ]
+  },
+  "Ego-Vehicle": {
+    "Direction": "EgoForward",
+    "Maneuver": "EgoMoving"
   },
   "CameraCondition": "Clear",
   "Severity": 5

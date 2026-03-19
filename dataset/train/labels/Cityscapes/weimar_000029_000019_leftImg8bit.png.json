@@ -5,7 +5,7 @@
   "RoadConditions": "Dry",
   "LaneInformation": {
     "NumberOfLanes": "NoLane",
-    "LaneMarkings": "Not Visible",
+    "LaneMarkings": "LaneNotVisible",
     "SpecialLanes": [
       "NoSpecialLanes"
     ]
@@ -15,14 +15,14 @@
       "Do Not Enter",
       "Parking Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Hatchback",
-      "Sedan"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Hatchback",
+      "Sedan"
+    ],
     "InMotion": [
       "False"
     ],
@@ -33,10 +33,6 @@
   "Pedestrians": [
     "Visible on Sidewalk"
   ],
-  "Bicyclist": {
-    "Presence": "True",
-    "Location": "In Vehicle Lane"
-  },
   "Directionality": "One-Way",
   "Visibility": {
     "General": "Good",

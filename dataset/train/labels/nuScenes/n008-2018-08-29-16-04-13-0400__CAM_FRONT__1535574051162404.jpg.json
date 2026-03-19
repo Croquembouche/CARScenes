@@ -4,7 +4,7 @@
   "Weather": "Clear",
   "RoadConditions": "Dry",
   "LaneInformation": {
-    "NumberOfLanes": "Two",
+    "NumberOfLanes": "2",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "Crosswalk"
@@ -14,14 +14,14 @@
     "TrafficSignsTypes": [
       "Yield Sign"
     ],
-    "TrafficSignsVisibility": "Good",
-    "VehicleTypes": [
-      "Sedan",
-      "SUV"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Sedan",
+      "SUV"
+    ],
     "InMotion": [
       "False"
     ],

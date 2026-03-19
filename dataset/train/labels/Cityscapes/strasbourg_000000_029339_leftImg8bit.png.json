@@ -5,7 +5,7 @@
   "RoadConditions": "Dry",
   "LaneInformation": {
     "NumberOfLanes": "NoLane",
-    "LaneMarkings": "Not Visible",
+    "LaneMarkings": "LaneNotVisible",
     "SpecialLanes": [
       "Bike Lane",
       "Crosswalk"
@@ -16,13 +16,13 @@
       "No Entry Sign",
       "Street Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Van"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Van"
+    ],
     "InMotion": [
       "False"
     ],
@@ -33,10 +33,6 @@
   "Pedestrians": [
     "MultiplePed"
   ],
-  "Bicyclist": {
-    "Presence": "True",
-    "Location": "In Vehicle Lane"
-  },
   "Directionality": "Unknown",
   "Visibility": {
     "General": "Good",

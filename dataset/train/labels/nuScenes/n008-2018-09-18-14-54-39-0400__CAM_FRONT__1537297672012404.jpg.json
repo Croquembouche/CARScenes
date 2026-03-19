@@ -4,8 +4,8 @@
   "Weather": "Rainy",
   "RoadConditions": "Wet",
   "LaneInformation": {
-    "NumberOfLanes": "One",
-    "LaneMarkings": "Lane Not Clearly Visible",
+    "NumberOfLanes": "1",
+    "LaneMarkings": "LaneNotClearlyVisible",
     "SpecialLanes": [
       "Street Parking"
     ]
@@ -14,14 +14,14 @@
     "TrafficSignsTypes": [
       "No Parking"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Pickup Truck",
-      "Sedan"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Pickup Truck",
+      "Sedan"
+    ],
     "InMotion": [
       "True"
     ],

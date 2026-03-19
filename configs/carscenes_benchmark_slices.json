@@ -1,0 +1,37 @@
+[
+  {
+    "name": "night_or_dusk_and_rain",
+    "all": [
+      {"field": "TimeOfDay", "in": ["Nighttime", "Dusk/Dawn"]},
+      {"field": "Weather", "in": ["Rainy"]}
+    ]
+  },
+  {
+    "name": "vru_and_intersection",
+    "all": [
+      {"field": "_slice_tags.vru_present", "equals": true},
+      {"field": "Scene", "in": ["Intersection", "Roundabout"]}
+    ]
+  },
+  {
+    "name": "traffic_light_and_high_severity",
+    "all": [
+      {"field": "_slice_tags.traffic_light_present", "equals": true},
+      {"field": "_slice_tags.severity_bucket", "equals": "7-10"}
+    ]
+  },
+  {
+    "name": "poor_visibility_and_parked_vehicles",
+    "all": [
+      {"field": "_slice_tags.adverse_conditions", "equals": true},
+      {"field": "Vehicles.States", "contains": "Parked"}
+    ]
+  },
+  {
+    "name": "roundabout_and_multiple_vehicles",
+    "all": [
+      {"field": "Directionality", "equals": "Roundabout"},
+      {"field": "Vehicles.TotalNumber", "equals": "MultipleVehicles"}
+    ]
+  }
+]

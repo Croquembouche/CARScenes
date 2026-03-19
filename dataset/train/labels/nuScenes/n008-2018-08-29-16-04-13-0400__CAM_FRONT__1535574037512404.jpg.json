@@ -11,17 +11,17 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Green",
     "TrafficSignsTypes": [
       "Traffic Light"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Bus"
-    ]
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Green"
   },
   "Vehicles": {
     "TotalNumber": "One",
+    "VehicleTypes": [
+      "Bus"
+    ],
     "InMotion": [
       "True"
     ],
@@ -30,7 +30,7 @@
     ]
   },
   "Pedestrians": [
-    "One"
+    "MultiplePed"
   ],
   "Directionality": "One-Way",
   "Visibility": {

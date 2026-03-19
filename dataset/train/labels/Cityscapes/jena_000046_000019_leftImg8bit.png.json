@@ -15,27 +15,17 @@
       "Bus Stop Sign",
       "Directional Arrow"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "NoVehicleType"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "NoVehicle",
-    "InMotion": [
-      "False"
-    ],
-    "States": [
-      "NoVehicleState"
-    ]
+    "VehicleTypes": [],
+    "InMotion": [],
+    "States": []
   },
   "Pedestrians": [
     "Visible on Sidewalk"
   ],
-  "Bicyclist": {
-    "Presence": "True",
-    "Location": "In Vehicle Lane"
-  },
   "Directionality": "Two-Way",
   "Visibility": {
     "General": "Good",

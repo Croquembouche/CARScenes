@@ -4,7 +4,7 @@
   "Weather": "Overcast",
   "RoadConditions": "Dry",
   "LaneInformation": {
-    "NumberOfLanes": "Two",
+    "NumberOfLanes": "2",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "NoSpecialLanes"
@@ -14,14 +14,16 @@
     "TrafficSignsTypes": [
       "Do Not Enter"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Sedan"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
-    "TotalNumber": 2,
-    "InMotion": 1,
+    "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Sedan"
+    ],
+    "InMotion": [
+      "True"
+    ],
     "States": [
       "In Motion",
       "Parked"

@@ -11,19 +11,19 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Green",
     "TrafficSignsTypes": [
       "No Parking",
       "Traffic Light"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Sedan",
-      "Van"
-    ]
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Green"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Sedan",
+      "Van"
+    ],
     "InMotion": [
       "True"
     ],
@@ -33,12 +33,8 @@
     ]
   },
   "Pedestrians": [
-    "Walking on Sidewalk"
+    "Visible on Sidewalk"
   ],
-  "Bicyclist": {
-    "Presence": "True",
-    "Location": "In Bike Lane"
-  },
   "Directionality": "Two-Way",
   "Visibility": {
     "General": "Good",

@@ -5,25 +5,25 @@
   "RoadConditions": "Wet",
   "LaneInformation": {
     "NumberOfLanes": "MultipleLanes",
-    "LaneMarkings": "Lane Not Clearly Visible",
+    "LaneMarkings": "LaneNotClearlyVisible",
     "SpecialLanes": [
       "NoSpecialLanes"
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Red",
     "TrafficSignsTypes": [
       "Pedestrian Crossing",
       "Traffic Light"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "SUV",
-      "Delivery Truck"
-    ]
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Red"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "SUV",
+      "Delivery Truck"
+    ],
     "InMotion": [
       "True"
     ],

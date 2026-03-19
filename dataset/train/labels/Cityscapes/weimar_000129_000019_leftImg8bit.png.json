@@ -15,13 +15,13 @@
       "No Parking",
       "Directional Arrow"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Van"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Van"
+    ],
     "InMotion": [
       "False"
     ],

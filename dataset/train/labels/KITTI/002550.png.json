@@ -1,11 +1,11 @@
 {
-  "Scene": "Narrow Residential Road",
+  "Scene": "Residential",
   "TimeOfDay": "Daytime",
   "Weather": "Clear",
   "RoadConditions": "Dry",
   "LaneInformation": {
-    "NumberOfLanes": "Two",
-    "LaneMarkings": "Lane Not Clearly Visible",
+    "NumberOfLanes": "2",
+    "LaneMarkings": "LaneNotClearlyVisible",
     "SpecialLanes": [
       "NoSpecialLanes"
     ]
@@ -14,14 +14,14 @@
     "TrafficSignsTypes": [
       "NoTrafficSigns"
     ],
-    "TrafficSignsVisibility": "SignNotVisible",
-    "VehicleTypes": [
-      "Hatchback",
-      "Sedan"
-    ]
+    "TrafficSignsVisibility": "SignNotVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Hatchback",
+      "Sedan"
+    ],
     "InMotion": [
       "True"
     ],
@@ -30,19 +30,19 @@
     ]
   },
   "Pedestrians": [
-    "Visible"
+    "MultiplePed"
   ],
   "Directionality": "Two-Way",
   "Visibility": {
     "General": "Limited",
     "SpecificImpairments": [
-      "Shadows and Vegetation"
+      "Shadows"
     ]
   },
   "Ego-Vehicle": {
     "Direction": "EgoForward",
     "Maneuver": "EgoMoving"
   },
-  "CameraCondition": "Overexposed",
+  "CameraCondition": "Glare",
   "Severity": 4
 }

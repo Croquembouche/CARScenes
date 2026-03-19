@@ -14,13 +14,13 @@
     "TrafficSignsTypes": [
       "NoTrafficSigns"
     ],
-    "TrafficSignsVisibility": "SignNotVisible",
-    "VehicleTypes": [
-      "Motorcycle"
-    ]
+    "TrafficSignsVisibility": "SignNotVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Motorcycle"
+    ],
     "InMotion": [
       "False"
     ],
@@ -32,15 +32,15 @@
     "NoPed"
   ],
   "Directionality": "Two-Way",
-  "Ego-Vehicle": {
-    "Direction": "Making a Left Turn",
-    "Maneuver": "Turning"
-  },
   "Visibility": {
     "General": "Good",
     "SpecificImpairments": [
-      "Camera glare"
+      "Camera Glare"
     ]
+  },
+  "Ego-Vehicle": {
+    "Direction": "EgoMaking a Left Turn",
+    "Maneuver": "EgoTurning"
   },
   "CameraCondition": "Clear",
   "Severity": 6

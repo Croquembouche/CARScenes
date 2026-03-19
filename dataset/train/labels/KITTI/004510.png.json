@@ -11,19 +11,19 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Red",
     "TrafficSignsTypes": [
       "Traffic Light",
       "Yield Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "SUV",
-      "Sedan"
-    ]
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Red"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "SUV",
+      "Sedan"
+    ],
     "InMotion": [
       "False"
     ],
@@ -42,7 +42,7 @@
     ]
   },
   "Ego-Vehicle": {
-    "Direction": "EgoStopped at Traffic Light",
+    "Direction": "EgoStopped at Intersection",
     "Maneuver": "EgoFullStopped"
   },
   "CameraCondition": "Clear",

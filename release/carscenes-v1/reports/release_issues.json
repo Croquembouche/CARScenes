@@ -1,0 +1,54 @@
+{
+  "missing_labels": [
+    {
+      "source": "Argoverse1",
+      "image": "ring_front_center_315968229043881840.jpg"
+    },
+    {
+      "source": "Argoverse1",
+      "image": "ring_front_center_315972070026981192.jpg"
+    },
+    {
+      "source": "Argoverse1",
+      "image": "ring_front_center_315975185342168488.jpg"
+    }
+  ],
+  "extra_labels": [
+    {
+      "source": "Argoverse1",
+      "label": "ring_front_center_315968229010581848.jpg"
+    },
+    {
+      "source": "Argoverse1",
+      "label": "ring_front_center_315975185308868488.jpg"
+    }
+  ],
+  "wrapper_files": [],
+  "normalization_warnings": [],
+  "source_summary": {
+    "Argoverse1": {
+      "images": 837,
+      "labels": 836,
+      "missing_labels": 3,
+      "extra_labels": 2
+    },
+    "Cityscapes": {
+      "images": 595,
+      "labels": 595,
+      "missing_labels": 0,
+      "extra_labels": 0
+    },
+    "KITTI": {
+      "images": 749,
+      "labels": 749,
+      "missing_labels": 0,
+      "extra_labels": 0
+    },
+    "nuScenes": {
+      "images": 3014,
+      "labels": 3014,
+      "missing_labels": 0,
+      "extra_labels": 0
+    }
+  }
+}

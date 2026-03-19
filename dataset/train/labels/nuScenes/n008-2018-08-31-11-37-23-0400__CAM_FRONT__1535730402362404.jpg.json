@@ -4,29 +4,26 @@
   "Weather": "Clear",
   "RoadConditions": "Dry",
   "LaneInformation": {
-    "NumberOfLanes": "Two",
+    "NumberOfLanes": "2",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "NoSpecialLanes"
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": [
-      "Green",
-      "Red Left Arrow"
-    ],
     "TrafficSignsTypes": [
       "Traffic Light",
       "Route Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Bus",
-      "Cars"
-    ]
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "In Transition(TwoState)"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Bus",
+      "Cars"
+    ],
     "InMotion": [
       "True"
     ],

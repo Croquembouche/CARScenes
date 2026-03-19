@@ -11,21 +11,21 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Green",
     "TrafficSignsTypes": [
       "Traffic Light",
       "Yield Sign",
       "Directional Arrow"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Green"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "Sedan",
       "SUV",
       "Hatchback"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+    ],
     "InMotion": [
       "True"
     ],
@@ -45,8 +45,8 @@
     ]
   },
   "Ego-Vehicle": {
-    "Direction": "EgoRight",
-    "Maneuver": "EgoTurningRight"
+    "Direction": "EgoMaking a Right Turn",
+    "Maneuver": "EgoTurning Right"
   },
   "CameraCondition": "Clear",
   "Severity": 4

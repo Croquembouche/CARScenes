@@ -11,18 +11,18 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Green",
     "TrafficSignsTypes": [
       "Traffic Light"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Sedan",
-      "Pickup Truck"
-    ]
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Green"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Sedan",
+      "Pickup Truck"
+    ],
     "InMotion": [
       "True"
     ],
@@ -34,15 +34,15 @@
     "NoPed"
   ],
   "Directionality": "Two-Way",
-  "Ego-Vehicle": {
-    "Direction": "Making a Left Turn",
-    "Maneuver": "Turning"
-  },
   "Visibility": {
     "General": "Reduced",
     "SpecificImpairments": [
-      "Camera glare"
+      "Camera Glare"
     ]
+  },
+  "Ego-Vehicle": {
+    "Direction": "EgoMaking a Left Turn",
+    "Maneuver": "EgoTurning"
   },
   "CameraCondition": "Glare",
   "Severity": 4

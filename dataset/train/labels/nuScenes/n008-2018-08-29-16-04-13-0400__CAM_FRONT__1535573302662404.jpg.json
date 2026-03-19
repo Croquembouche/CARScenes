@@ -4,7 +4,7 @@
   "Weather": "Clear",
   "RoadConditions": "Dry",
   "LaneInformation": {
-    "NumberOfLanes": "Two",
+    "NumberOfLanes": "2",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "Crosswalk"
@@ -15,34 +15,28 @@
       "No Turn On Red",
       "One Way Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "NoVehicleType"
-    ]
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Red"
   },
-  "TrafficLightState": "Red",
   "Vehicles": {
     "TotalNumber": "NoVehicle",
-    "InMotion": [
-      "False"
-    ],
-    "States": [
-      "NoVehicleState"
-    ]
+    "VehicleTypes": [],
+    "InMotion": [],
+    "States": []
   },
   "Pedestrians": [
     "NoPed"
   ],
   "Directionality": "Two-Way",
-  "Ego-Vehicle": {
-    "Direction": "EgoStopped at Intersection",
-    "Maneuver": "EgoWaiting"
-  },
   "Visibility": {
     "General": "Good",
     "SpecificImpairments": [
       "NoImpairments"
     ]
+  },
+  "Ego-Vehicle": {
+    "Direction": "EgoStopped at Intersection",
+    "Maneuver": "EgoWaiting"
   },
   "CameraCondition": "Clear",
   "Severity": 2

@@ -14,13 +14,13 @@
     "TrafficSignsTypes": [
       "Stop Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Commercial Delivery Truck"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Commercial Delivery Truck"
+    ],
     "InMotion": [
       "True"
     ],

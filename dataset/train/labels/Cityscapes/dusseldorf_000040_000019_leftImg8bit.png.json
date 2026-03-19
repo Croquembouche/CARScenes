@@ -5,7 +5,7 @@
   "RoadConditions": "Wet",
   "LaneInformation": {
     "NumberOfLanes": "NoLane",
-    "LaneMarkings": "Not Visible",
+    "LaneMarkings": "LaneNotVisible",
     "SpecialLanes": [
       "NoSpecialLanes"
     ]
@@ -16,14 +16,14 @@
       "Parking Sign",
       "Directional Arrow"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Taxi",
-      "SUV"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Taxi",
+      "SUV"
+    ],
     "InMotion": [
       "True"
     ],
@@ -34,10 +34,6 @@
   "Pedestrians": [
     "Crossing Street"
   ],
-  "Bicyclist": {
-    "Presence": "True",
-    "Location": "On Sidewalk"
-  },
   "Directionality": "Unknown",
   "Visibility": {
     "General": "Reduced",

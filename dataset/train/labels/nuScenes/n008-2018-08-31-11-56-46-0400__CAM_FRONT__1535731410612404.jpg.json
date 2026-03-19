@@ -4,7 +4,7 @@
   "Weather": "Clear",
   "RoadConditions": "Dry",
   "LaneInformation": {
-    "NumberOfLanes": "Two",
+    "NumberOfLanes": "2",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "NoSpecialLanes"
@@ -14,16 +14,16 @@
     "TrafficSignsTypes": [
       "Road Work"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "Sedan",
       "SUV",
       "Van",
       "Truck"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+    ],
     "InMotion": [
       "True"
     ],
@@ -43,7 +43,7 @@
     ]
   },
   "Ego-Vehicle": {
-    "Direction": "EgoMerging Left",
+    "Direction": "EgoMerging",
     "Maneuver": "EgoOvertaking on Opposing Lane"
   },
   "CameraCondition": "Clear",

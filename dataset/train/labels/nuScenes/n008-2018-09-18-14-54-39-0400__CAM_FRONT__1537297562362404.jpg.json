@@ -4,7 +4,7 @@
   "Weather": "Rainy",
   "RoadConditions": "Wet",
   "LaneInformation": {
-    "NumberOfLanes": "Two",
+    "NumberOfLanes": "2",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "Street Parking"
@@ -14,14 +14,14 @@
     "TrafficSignsTypes": [
       "Pedestrian Crossing"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Pickup Truck",
-      "Cars"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Pickup Truck",
+      "Cars"
+    ],
     "InMotion": [
       "True"
     ],
@@ -34,9 +34,6 @@
   "Pedestrians": [
     "NoPed"
   ],
-  "Animals": {
-    "None": "True"
-  },
   "Directionality": "Two-Way",
   "Visibility": {
     "General": "Reduced",

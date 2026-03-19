@@ -4,26 +4,26 @@
   "Weather": "Rainy",
   "RoadConditions": "Wet",
   "LaneInformation": {
-    "NumberOfLanes": "Three",
+    "NumberOfLanes": "3",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "NoSpecialLanes"
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Red",
     "TrafficSignsTypes": [
       "Traffic Light",
       "No Turn On Red"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Pickup Truck",
-      "Commercial Delivery Truck"
-    ]
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Red"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Pickup Truck",
+      "Commercial Delivery Truck"
+    ],
     "InMotion": [
       "False"
     ],
@@ -35,15 +35,15 @@
     "NoPed"
   ],
   "Directionality": "One-Way",
-  "Ego-Vehicle": {
-    "Direction": "EgoForward",
-    "Maneuver": "EgoFullStopped"
-  },
   "Visibility": {
     "General": "Reduced",
     "SpecificImpairments": [
       "Obstructed by Rain"
     ]
+  },
+  "Ego-Vehicle": {
+    "Direction": "EgoForward",
+    "Maneuver": "EgoFullStopped"
   },
   "CameraCondition": "RainOnLens",
   "Severity": 5

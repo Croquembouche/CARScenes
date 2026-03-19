@@ -14,16 +14,16 @@
   "TrafficSigns": {
     "TrafficSignsTypes": [
       "Bike Lane Sign",
-      "Warning Sign"
+      "Information Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Sedan",
-      "Bus"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Sedan",
+      "Bus"
+    ],
     "InMotion": [
       "True"
     ],

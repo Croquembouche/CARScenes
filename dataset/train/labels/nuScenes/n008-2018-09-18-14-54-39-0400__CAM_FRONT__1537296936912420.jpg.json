@@ -4,7 +4,7 @@
   "Weather": "Overcast",
   "RoadConditions": "Wet",
   "LaneInformation": {
-    "NumberOfLanes": "Two",
+    "NumberOfLanes": "2",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "Bridge"
@@ -14,14 +14,14 @@
     "TrafficSignsTypes": [
       "NoTrafficSigns"
     ],
-    "TrafficSignsVisibility": "NoTrafficSigns",
-    "VehicleTypes": [
-      "Sedan",
-      "Commercial Vehicle"
-    ]
+    "TrafficSignsVisibility": "SignNotVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Sedan",
+      "Commercial Vehicle"
+    ],
     "InMotion": [
       "True"
     ],

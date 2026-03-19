@@ -12,20 +12,20 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Red",
     "TrafficSignsTypes": [
       "Traffic Light",
       "Street Sign",
       "Bus Stop Sign",
       "Keep Right Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Sedan"
-    ]
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Red"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Sedan"
+    ],
     "InMotion": [
       "False"
     ],
@@ -36,10 +36,6 @@
   "Pedestrians": [
     "MultiplePed"
   ],
-  "Bicyclist": {
-    "Presence": "True",
-    "Location": "In Bike Lane"
-  },
   "Directionality": "Two-Way",
   "Visibility": {
     "General": "Good",
@@ -48,7 +44,7 @@
     ]
   },
   "Ego-Vehicle": {
-    "Direction": "EgoStopped at Traffic Light",
+    "Direction": "EgoStopped at Intersection",
     "Maneuver": "EgoFullStopped"
   },
   "CameraCondition": "Clear",

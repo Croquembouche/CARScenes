@@ -7,7 +7,7 @@
     "NumberOfLanes": "MultipleLanes",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
-      "Exit Sign"
+      "NoSpecialLanes"
     ]
   },
   "TrafficSigns": {
@@ -15,15 +15,15 @@
       "Exit Sign",
       "Curve"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "Sedan",
       "Van",
       "RV"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+    ],
     "InMotion": [
       "True"
     ],

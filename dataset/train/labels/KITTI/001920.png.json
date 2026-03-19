@@ -17,14 +17,14 @@
       "Directional Arrow",
       "Pedestrian Crossing"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Bus",
-      "Sedan"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Bus",
+      "Sedan"
+    ],
     "InMotion": [
       "True"
     ],
@@ -35,10 +35,6 @@
   "Pedestrians": [
     "Visible on Sidewalk"
   ],
-  "Bicyclist": {
-    "Presence": "True",
-    "Location": "In Bike Lane"
-  },
   "Directionality": "Two-Way",
   "Visibility": {
     "General": "Good",

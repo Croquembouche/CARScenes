@@ -11,17 +11,17 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Red",
     "TrafficSignsTypes": [
       "Traffic Light"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Pickup Truck"
-    ]
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Red"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Pickup Truck"
+    ],
     "InMotion": [
       "True"
     ],
@@ -30,7 +30,7 @@
     ]
   },
   "Pedestrians": [
-    "Visible on Crosswalk"
+    "Crossing Street"
   ],
   "Directionality": "Two-Way",
   "Visibility": {

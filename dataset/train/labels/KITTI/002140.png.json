@@ -14,16 +14,16 @@
     "TrafficSignsTypes": [
       "Curve"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "RV",
       "Sedan",
       "Truck",
-      "Trailer"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+      "Semi-Trailer Truck"
+    ],
     "InMotion": [
       "True"
     ],

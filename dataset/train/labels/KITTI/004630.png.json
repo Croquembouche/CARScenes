@@ -1,5 +1,5 @@
 {
-  "Scene": "Bridge",
+  "Scene": "Under Bridge",
   "TimeOfDay": "Daytime",
   "Weather": "Clear",
   "RoadConditions": "Dry",
@@ -15,15 +15,15 @@
     "TrafficSignsTypes": [
       "NoTrafficSigns"
     ],
-    "TrafficSignsVisibility": "SignNotVisible",
+    "TrafficSignsVisibility": "SignNotVisible"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "Sedan",
       "SUV",
       "Truck"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+    ],
     "InMotion": [
       "True"
     ],
@@ -34,10 +34,6 @@
   "Pedestrians": [
     "NoPed"
   ],
-  "Bicyclist": {
-    "Presence": "True",
-    "Location": "On Sidewalk"
-  },
   "Directionality": "Two-Way",
   "Visibility": {
     "General": "Good",

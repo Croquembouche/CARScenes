@@ -14,14 +14,14 @@
     "TrafficSignsTypes": [
       "Route Sign"
     ],
-    "TrafficSignsVisibility": "Clear",
-    "VehicleTypes": [
-      "Cars",
-      "Truck"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Cars",
+      "Truck"
+    ],
     "InMotion": [
       "True"
     ],

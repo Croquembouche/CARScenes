@@ -12,21 +12,21 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Red",
     "TrafficSignsTypes": [
       "Traffic Light",
       "Directional Arrow",
       "Pedestrian Signal"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Red"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "Sedan",
       "Hatchback",
       "SUV"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+    ],
     "InMotion": [
       "False"
     ],
@@ -38,10 +38,6 @@
   "Pedestrians": [
     "Visible on Sidewalk"
   ],
-  "Bicyclist": {
-    "Presence": "True",
-    "Location": "In Bike Lane"
-  },
   "Directionality": "Two-Way",
   "Visibility": {
     "General": "Good",
@@ -50,7 +46,7 @@
     ]
   },
   "Ego-Vehicle": {
-    "Direction": "EgoStopped at Traffic Light",
+    "Direction": "EgoStopped at Intersection",
     "Maneuver": "EgoFullStopped"
   },
   "CameraCondition": "Clear",

@@ -14,14 +14,14 @@
     "TrafficSignsTypes": [
       "Yield Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Truck",
-      "Sedan"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Truck",
+      "Sedan"
+    ],
     "InMotion": [
       "True"
     ],

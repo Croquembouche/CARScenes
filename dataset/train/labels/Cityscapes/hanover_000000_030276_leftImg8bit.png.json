@@ -11,20 +11,20 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Green",
     "TrafficSignsTypes": [
       "Yield Sign",
       "Pedestrian Crossing",
       "Traffic Light"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Sedan",
-      "Van"
-    ]
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Green"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Sedan",
+      "Van"
+    ],
     "InMotion": [
       "True"
     ],
@@ -35,10 +35,6 @@
   "Pedestrians": [
     "Crossing Street"
   ],
-  "Bicyclist": {
-    "Presence": "True",
-    "Location": "In Vehicle Lane"
-  },
   "Directionality": "Roundabout",
   "Visibility": {
     "General": "Good",
@@ -47,7 +43,7 @@
     ]
   },
   "Ego-Vehicle": {
-    "Direction": "EgoMoving",
+    "Direction": "EgoForward",
     "Maneuver": "EgoFollowing"
   },
   "CameraCondition": "Clear",

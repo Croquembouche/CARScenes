@@ -16,14 +16,14 @@
       "No Entry Sign",
       "Street Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Tram",
-      "Sedan"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Tram",
+      "Sedan"
+    ],
     "InMotion": [
       "True"
     ],

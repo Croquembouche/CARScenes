@@ -1,7 +1,7 @@
 {
   "Scene": "Intersection",
   "TimeOfDay": "Dusk/Dawn",
-  "Weather": "NoWeatherCondition",
+  "Weather": "Not Indicated",
   "RoadConditions": "Dry",
   "LaneInformation": {
     "NumberOfLanes": "MultipleLanes",
@@ -11,18 +11,18 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Red",
     "TrafficSignsTypes": [
       "Traffic Light"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Pickup Truck",
-      "Sedan"
-    ]
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Red"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Pickup Truck",
+      "Sedan"
+    ],
     "InMotion": [
       "False"
     ],
@@ -35,15 +35,15 @@
     "NoPed"
   ],
   "Directionality": "Two-Way",
-  "Ego-Vehicle": {
-    "Direction": "Approaching Intersection",
-    "Maneuver": "Waiting"
-  },
   "Visibility": {
     "General": "Reduced",
     "SpecificImpairments": [
       "Shadows"
     ]
+  },
+  "Ego-Vehicle": {
+    "Direction": "EgoApproaching Intersection",
+    "Maneuver": "EgoWaiting"
   },
   "CameraCondition": "Clear",
   "Severity": 3

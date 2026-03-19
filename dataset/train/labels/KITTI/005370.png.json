@@ -12,16 +12,16 @@
   },
   "TrafficSigns": {
     "TrafficSignsTypes": [
-      "NoSign"
+      "NoTrafficSigns"
     ],
-    "TrafficSignsVisibility": "Not Clearly Visible",
-    "VehicleTypes": [
-      "Sedan",
-      "Trolley"
-    ]
+    "TrafficSignsVisibility": "SignNotVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Sedan",
+      "Trolley"
+    ],
     "InMotion": [
       "True"
     ],

@@ -5,7 +5,7 @@
   "RoadConditions": "Dry",
   "LaneInformation": {
     "NumberOfLanes": "NoLane",
-    "LaneMarkings": "Lane Not Clearly Visible",
+    "LaneMarkings": "LaneNotClearlyVisible",
     "SpecialLanes": [
       "Street Parking",
       "Crosswalk"
@@ -15,14 +15,14 @@
     "TrafficSignsTypes": [
       "Yield Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Sedan",
-      "Hatchback"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Sedan",
+      "Hatchback"
+    ],
     "InMotion": [
       "True"
     ],
@@ -32,7 +32,7 @@
     ]
   },
   "Pedestrians": [
-    "Visible on Crosswalk"
+    "Crossing Street"
   ],
   "Directionality": "Two-Way",
   "Visibility": {

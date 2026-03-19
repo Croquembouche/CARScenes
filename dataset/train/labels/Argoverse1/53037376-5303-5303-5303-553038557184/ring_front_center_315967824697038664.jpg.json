@@ -1,7 +1,7 @@
 {
   "Scene": "Commercial",
   "TimeOfDay": "Nighttime",
-  "Weather": "NoWeatherCondition",
+  "Weather": "Not Indicated",
   "RoadConditions": "Dry",
   "LaneInformation": {
     "NumberOfLanes": "MultipleLanes",
@@ -15,14 +15,14 @@
     "TrafficSignsTypes": [
       "NoTrafficSigns"
     ],
-    "TrafficSignsVisibility": "SignNotVisible",
-    "VehicleTypes": [
-      "Sedan",
-      "SUV"
-    ]
+    "TrafficSignsVisibility": "SignNotVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Sedan",
+      "SUV"
+    ],
     "InMotion": [
       "False"
     ],
@@ -36,15 +36,15 @@
     "MultiplePed"
   ],
   "Directionality": "Two-Way",
-  "Ego-Vehicle": {
-    "Direction": "Forward",
-    "Maneuver": "Moving"
-  },
   "Visibility": {
     "General": "Good",
     "SpecificImpairments": [
-      "Camera glare"
+      "Camera Glare"
     ]
+  },
+  "Ego-Vehicle": {
+    "Direction": "EgoForward",
+    "Maneuver": "EgoMoving"
   },
   "CameraCondition": "Glare",
   "Severity": 5

@@ -5,23 +5,23 @@
   "RoadConditions": "Dry",
   "LaneInformation": {
     "NumberOfLanes": "MultipleLanes",
-    "LaneMarkings": "Lane Not Clearly Visible",
+    "LaneMarkings": "LaneNotClearlyVisible",
     "SpecialLanes": [
       "Tram Tracks"
     ]
   },
   "TrafficSigns": {
     "TrafficSignsTypes": [
-      "No Entry",
+      "No Entry Sign",
       "Bus Stop Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Trolley"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Trolley"
+    ],
     "InMotion": [
       "True"
     ],
@@ -32,10 +32,6 @@
   "Pedestrians": [
     "MultiplePed"
   ],
-  "Bicyclist": {
-    "Presence": "True",
-    "Location": "In Vehicle Lane"
-  },
   "Directionality": "Two-Way",
   "Visibility": {
     "General": "Good",

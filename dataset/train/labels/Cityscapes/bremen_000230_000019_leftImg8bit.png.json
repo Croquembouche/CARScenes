@@ -12,19 +12,19 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Yellow",
     "TrafficSignsTypes": [
       "Traffic Light",
       "No Parking",
       "Directional Arrow"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Hatchback"
-    ]
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Yellow"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Hatchback"
+    ],
     "InMotion": [
       "True"
     ],

@@ -1,5 +1,5 @@
 {
-  "Scene": "Roundabout",
+  "Scene": "Intersection",
   "TimeOfDay": "Daytime",
   "Weather": "Overcast",
   "RoadConditions": "Dry",
@@ -15,14 +15,14 @@
       "Yield Sign",
       "Curve"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "SUV",
-      "Sedan"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "SUV",
+      "Sedan"
+    ],
     "InMotion": [
       "True"
     ],
@@ -34,10 +34,6 @@
   "Pedestrians": [
     "NoPed"
   ],
-  "Bicyclist": {
-    "Presence": "True",
-    "Location": "On Sidewalk"
-  },
   "Directionality": "Roundabout",
   "Visibility": {
     "General": "Good",

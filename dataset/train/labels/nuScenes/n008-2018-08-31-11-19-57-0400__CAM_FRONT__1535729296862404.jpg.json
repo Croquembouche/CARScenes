@@ -4,7 +4,7 @@
   "Weather": "Clear",
   "RoadConditions": "Dry",
   "LaneInformation": {
-    "NumberOfLanes": "Two",
+    "NumberOfLanes": "2",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "Taxi and Bus Lane"
@@ -14,14 +14,14 @@
     "TrafficSignsTypes": [
       "Bus Stop Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Cars",
-      "Truck"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Cars",
+      "Truck"
+    ],
     "InMotion": [
       "True"
     ],
@@ -31,7 +31,7 @@
     ]
   },
   "Pedestrians": [
-    "Few"
+    "MultiplePed"
   ],
   "Directionality": "Two-Way",
   "Visibility": {

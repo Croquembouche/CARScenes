@@ -12,17 +12,17 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Red",
     "TrafficSignsTypes": [
       "Traffic Light"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Cars"
-    ]
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Red"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Cars"
+    ],
     "InMotion": [
       "False"
     ],
@@ -38,7 +38,7 @@
     "General": "Reduced",
     "SpecificImpairments": [
       "Obstructed by Rain",
-      "Glare"
+      "Camera Glare"
     ]
   },
   "Ego-Vehicle": {

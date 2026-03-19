@@ -1,0 +1,28 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "ml": "http://mlcommons.org/croissant/"
+  },
+  "@type": "cr:Dataset",
+  "name": "CARScenes v1",
+  "description": "Annotation-only release for the CARScenes scene-understanding benchmark with fully human-corrected labels.",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "carscenes-records",
+      "name": "carscenes_v1_records.jsonl",
+      "contentUrl": "release/carscenes-v1/data/carscenes_v1_records.jsonl",
+      "encodingFormat": "application/jsonlines"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "carscenes-schema",
+      "name": "carscenes_v1_schema.json",
+      "contentUrl": "release/carscenes-v1/schema/carscenes_v1_schema.json",
+      "encodingFormat": "application/json"
+    }
+  ]
+}

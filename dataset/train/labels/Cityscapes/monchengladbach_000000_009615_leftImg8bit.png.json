@@ -11,18 +11,18 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "In Transition(TwoState)",
     "TrafficSignsTypes": [
       "Traffic Light"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Sedan",
-      "SUV"
-    ]
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "In Transition(TwoState)"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Sedan",
+      "SUV"
+    ],
     "InMotion": [
       "False"
     ],
@@ -31,7 +31,7 @@
     ]
   },
   "Pedestrians": [
-    "Present on Sidewalk"
+    "Visible on Sidewalk"
   ],
   "Directionality": "Two-Way",
   "Visibility": {
@@ -42,7 +42,7 @@
   },
   "Ego-Vehicle": {
     "Direction": "EgoForward",
-    "Maneuver": "EgoProceeding"
+    "Maneuver": "EgoProceeding through Intersection"
   },
   "CameraCondition": "Clear",
   "Severity": 1

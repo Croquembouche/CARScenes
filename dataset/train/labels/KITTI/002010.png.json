@@ -15,14 +15,14 @@
     "TrafficSignsTypes": [
       "Road Work Ahead"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Van",
-      "Sedan"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Van",
+      "Sedan"
+    ],
     "InMotion": [
       "True"
     ],

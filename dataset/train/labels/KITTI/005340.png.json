@@ -14,13 +14,13 @@
     "TrafficSignsTypes": [
       "Keep Right Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Cars"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Cars"
+    ],
     "InMotion": [
       "True"
     ],

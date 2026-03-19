@@ -7,23 +7,23 @@
     "NumberOfLanes": "MultipleLanes",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
-      "Turning Lane"
+      "NoSpecialLanes"
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "Green",
     "TrafficSignsTypes": [
       "Yield Sign",
       "Traffic Light"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Sedan",
-      "Hatchback"
-    ]
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "Green"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Sedan",
+      "Hatchback"
+    ],
     "InMotion": [
       "True"
     ],
@@ -32,7 +32,7 @@
     ]
   },
   "Pedestrians": [
-    "Walking on Sidewalk"
+    "Visible on Sidewalk"
   ],
   "Directionality": "Two-Way",
   "Visibility": {
@@ -42,7 +42,7 @@
     ]
   },
   "Ego-Vehicle": {
-    "Direction": "EgoTurning",
+    "Direction": "EgoForward",
     "Maneuver": "EgoWaiting"
   },
   "CameraCondition": "Clear",

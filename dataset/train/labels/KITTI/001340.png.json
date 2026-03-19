@@ -5,7 +5,7 @@
   "RoadConditions": "Dry",
   "LaneInformation": {
     "NumberOfLanes": "NoLane",
-    "LaneMarkings": "Lane Not Clearly Visible",
+    "LaneMarkings": "LaneNotClearlyVisible",
     "SpecialLanes": [
       "Tram Tracks",
       "Street Parking",
@@ -13,20 +13,19 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "In Transition(NoState)",
     "TrafficSignsTypes": [
       "Traffic Light",
       "Street Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Sedan",
-      "Motorcycle",
-      "Bicycle"
-    ]
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "In Transition(NoState)"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Sedan",
+      "Motorcycle"
+    ],
     "InMotion": [
       "False"
     ],
@@ -38,10 +37,6 @@
   "Pedestrians": [
     "MultiplePed"
   ],
-  "Bicyclist": {
-    "Presence": "True",
-    "Location": "In Vehicle Lane"
-  },
   "Directionality": "Two-Way",
   "Visibility": {
     "General": "Reduced",

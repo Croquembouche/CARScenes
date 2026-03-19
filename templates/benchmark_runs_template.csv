@@ -1,0 +1,5 @@
+run_id,display_name,model_family,adaptation,reference_path,predictions_path,notes
+gpt4o_zero_shot,GPT-4o,closed,zero-shot,../release/carscenes-v1/splits/gold-test-100.jsonl,../runs/benchmark/gold-test-100/gpt4o_zero_shot_predictions.jsonl,Replace with real predictions file
+qwen2vl_2b_zero_shot,Qwen2-VL-2B,open,zero-shot,../release/carscenes-v1/splits/gold-test-100.jsonl,../runs/benchmark/gold-test-100/qwen2vl_2b_zero_shot_predictions.jsonl,Replace with real predictions file
+qwen2vl_2b_lora,Qwen2-VL-2B LoRA,open,lora,../release/carscenes-v1/splits/gold-test-100.jsonl,../runs/benchmark/gold-test-100/qwen2vl_2b_lora_predictions.jsonl,Replace with real predictions file
+qwen2vl_7b_zero_shot,Qwen2-VL-7B,open,zero-shot,../release/carscenes-v1/splits/gold-test-100.jsonl,../runs/benchmark/gold-test-100/qwen2vl_7b_zero_shot_predictions.jsonl,Replace with real predictions file

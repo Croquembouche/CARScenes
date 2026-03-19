@@ -11,19 +11,19 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": "In Transition(NoState)",
     "TrafficSignsTypes": [
       "Pedestrian Crossing",
       "Yield Sign",
       "Bus Stop Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Motorcycle"
-    ]
+    "TrafficSignsVisibility": "SignVisible",
+    "TrafficLightState": "In Transition(NoState)"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Motorcycle"
+    ],
     "InMotion": [
       "True"
     ],

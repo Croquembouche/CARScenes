@@ -1,5 +1,5 @@
 {
-  "Scene": "Bridge",
+  "Scene": "Under Bridge",
   "TimeOfDay": "Daytime",
   "Weather": "Overcast",
   "RoadConditions": "Dry",
@@ -15,13 +15,13 @@
     "TrafficSignsTypes": [
       "NoTrafficSigns"
     ],
-    "TrafficSignsVisibility": "SignNotVisible",
-    "VehicleTypes": [
-      "Truck"
-    ]
+    "TrafficSignsVisibility": "SignNotVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Truck"
+    ],
     "InMotion": [
       "True"
     ],

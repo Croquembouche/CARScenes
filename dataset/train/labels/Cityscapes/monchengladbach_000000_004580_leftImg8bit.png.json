@@ -16,13 +16,13 @@
       "Directional Arrow",
       "Weight Limit"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Sedan"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Sedan"
+    ],
     "InMotion": [
       "True"
     ],
@@ -31,12 +31,8 @@
     ]
   },
   "Pedestrians": [
-    "Present on Sidewalk"
+    "Visible on Sidewalk"
   ],
-  "Bicyclist": {
-    "Presence": "True",
-    "Location": "In Bike Lane"
-  },
   "Directionality": "Two-Way",
   "Visibility": {
     "General": "Good",
@@ -46,7 +42,7 @@
   },
   "Ego-Vehicle": {
     "Direction": "EgoForward",
-    "Maneuver": "EgoProceeding"
+    "Maneuver": "EgoProceeding through Intersection"
   },
   "CameraCondition": "Clear",
   "Severity": 2

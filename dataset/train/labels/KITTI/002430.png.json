@@ -7,8 +7,7 @@
     "NumberOfLanes": "MultipleLanes",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
-      "Exit Lane",
-      "Median"
+      "Forward Only Lane"
     ]
   },
   "TrafficSigns": {
@@ -17,13 +16,13 @@
       "Directional Arrow",
       "Speed Limit"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Sedan"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Sedan"
+    ],
     "InMotion": [
       "True"
     ],

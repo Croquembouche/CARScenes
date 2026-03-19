@@ -4,7 +4,7 @@
   "Weather": "Overcast",
   "RoadConditions": "Dry",
   "LaneInformation": {
-    "NumberOfLanes": "Two",
+    "NumberOfLanes": "2",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "NoSpecialLanes"
@@ -14,13 +14,13 @@
     "TrafficSignsTypes": [
       "No Parking"
     ],
-    "TrafficSignsVisibility": "Clear",
-    "VehicleTypes": [
-      "Truck"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "One",
+    "VehicleTypes": [
+      "Truck"
+    ],
     "InMotion": [
       "True"
     ],
@@ -31,9 +31,6 @@
   "Pedestrians": [
     "Visible on Sidewalk"
   ],
-  "Animals": {
-    "Type": "Dog"
-  },
   "Directionality": "Two-Way",
   "Visibility": {
     "General": "Good",

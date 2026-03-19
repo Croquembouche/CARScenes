@@ -1,5 +1,5 @@
 {
-  "Scene": "Roundabout",
+  "Scene": "Intersection",
   "TimeOfDay": "Daytime",
   "Weather": "Sunny",
   "RoadConditions": "Dry",
@@ -15,15 +15,15 @@
       "No Parking",
       "Speed Limit"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "SUV",
       "Sedan",
       "Motorcycle"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+    ],
     "InMotion": [
       "False"
     ],
@@ -38,7 +38,7 @@
   "Visibility": {
     "General": "Good",
     "SpecificImpairments": [
-      "Glare"
+      "Camera Glare"
     ]
   },
   "Ego-Vehicle": {

@@ -15,14 +15,14 @@
       "Pedestrian Crossing",
       "Left Turn Only"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "SUV",
-      "Van"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "SUV",
+      "Van"
+    ],
     "InMotion": [
       "True"
     ],

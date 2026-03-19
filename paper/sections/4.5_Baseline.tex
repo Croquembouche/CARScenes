@@ -1,0 +1,10 @@
+\section{Scenario Utility and Benchmark Status}
+\label{sec:baseline}
+
+The central question for a NeurIPS Datasets and Benchmarks paper is whether the resource supports a real scientific use case rather than merely adding more labels. For CARScenes, that use case is slice-aware evaluation. The frozen schema and evaluator let a researcher compare models on the same canonical scene representation, then ask whether failures concentrate around visibility loss, traffic control, dense traffic, vulnerable road users, or higher semantic difficulty.
+
+This contribution is already concrete in the repository. The release includes a deterministic evaluator, fixed split manifests, and public slice definitions. Scalar fields are scored with exact-match accuracy, list-valued fields with micro-averaged precision/recall/F1, and \texttt{Severity} with exact-match accuracy, MAE, RMSE, and quadratic weighted kappa. The slice table in Table~\ref{tab:utility_slices} is therefore not merely descriptive metadata; it defines executable evaluation subsets that can be reused across models and papers.
+
+The current repository state also makes an important positive claim explicit: the held-out split is built from fully human-corrected labels rather than from unaudited model output. This revision therefore removes the earlier provisional framing from the IV draft and treats \texttt{gold-test-100} as a valid held-out benchmark split. The stronger scientific position is to separate label validity, which is provided by the human correction pass, from benchmark breadth, which can still be expanded with additional baselines and slice analyses.
+
+With the human correction pass complete, the benchmark should now be able to answer three questions cleanly. Which fields in structured scene understanding are already easy for modern VLMs and which remain weak? How much do overall scores hide differences across source datasets and scenario slices? And does the schema reveal failures that would be invisible if evaluation were limited to coarse source metadata or free-form descriptions? Those are the benchmark questions CARScenes is intended to support.

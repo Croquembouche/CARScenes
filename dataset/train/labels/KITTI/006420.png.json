@@ -14,16 +14,15 @@
     "TrafficSignsTypes": [
       "Pedestrian Warning"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "SUV",
-      "Sedan",
-      "Semi-Trailer Truck",
-      "Trailer"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "SUV",
+      "Sedan",
+      "Semi-Trailer Truck"
+    ],
     "InMotion": [
       "True"
     ],

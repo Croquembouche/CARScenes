@@ -5,7 +5,7 @@
   "RoadConditions": "Dry",
   "LaneInformation": {
     "NumberOfLanes": "NoLane",
-    "LaneMarkings": "Not Visible",
+    "LaneMarkings": "LaneNotVisible",
     "SpecialLanes": [
       "NoSpecialLanes"
     ]
@@ -14,14 +14,14 @@
     "TrafficSignsTypes": [
       "NoTrafficSigns"
     ],
-    "TrafficSignsVisibility": "SignNotVisible",
-    "VehicleTypes": [
-      "Sedan",
-      "Motorcycle"
-    ]
+    "TrafficSignsVisibility": "SignNotVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Sedan",
+      "Motorcycle"
+    ],
     "InMotion": [
       "False"
     ],
@@ -32,10 +32,6 @@
   "Pedestrians": [
     "MultiplePed"
   ],
-  "Animals": {
-    "Type": "Dog",
-    "State": "On Sidewalk"
-  },
   "Directionality": "Unknown",
   "Visibility": {
     "General": "Good",

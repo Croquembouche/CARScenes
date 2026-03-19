@@ -1,0 +1,148 @@
+Reviewer 
+number	Review 
+ID	Comments to the author	Attachment
+to the review	Comment on the Video demonstration
+2 	423 	In principle, reannotating datasets with more complex
+information is valuable . The paper frames its contribution
+around the training and evaluation of VLMs, but it
+overlooks an important benefit of such reannotations:
+enabling researchers to analyze whether certain models
+systematically fail in specific contextual scenarios and
+lack of diverse scenes in their datasets. This capability
+would be a much larger contribution, especially considering
+that current VLMs are not yet sufficient for autonomous
+driving and still require support from classical
+object-detection systems.
+Training VLMs such as the Qwen2-VL-2B is fine, but the
+paper would be significantly stronger if the model were
+used to automatically annotate additional frames with
+accuracy surpassing existing tools such as ChatGPT instead
+of training it for training’s sake.
+Overall, the impression is that the annotation has been
+done for the annotation’s sake, but in an applied field
+such as autonomous driving, the practical and highly useful
+implications should not be missed. Otherwise, the paper is
+incomplete.
+
+To the authors, the suggestion is therefore to expand the
+paper and showcase how and why other researchers should be
+using their annotations, baseline model etc.
+
+Additionally, the formatting needs some work and some
+figures are not readable. 	 	 
+3 	425 	This paper introduces a frame-level dataset, called
+CARScenes, designed to support interpretable, scene-level
+understanding for autonomous-driving VLMs. The overall idea
+is sound, but the paper shows several concerns related to
+writing quality, methodological rigor, and the discussion
+of results. In its current form, it reads more like a
+technical report than a scientific paper.
+
+1) the keyword list repeats the term “datasets.”
+
+2) I evaluated the demo tool
+(https://chatgpt.com/g/g-Rpba6Wp9Q-drive-scene-analyzer)
+using an image from the GOOSE dataset
+(2023-05-24_neubiberg_cloudy__0155_1684934442561783912_wind
+shield_vis.png). The model produced several hallucinations,
+including misclassifying moving vehicles as parked, merging
+two lanes into one, labeling a runner as a cyclist, and
+detecting street parking where none exists. It also
+misidentified vehicle positions (e.g., right and ahead).
+Similar issues appeared in BDD100k samples
+(cabc9045-5a50690f, cadfb2fe-f43878a3, cae842b9-82d52302).
+
+The paper should clearly acknowledge these limitations when
+linking to the demo.
+
+
+3) the paper does not follow standard scientific writing
+conventions. Excessive bold and italic formatting, frequent
+enumerations (e.g., i, ii), and irregular paragraph starts
+(e.g., Sections III-B, III-C, III-E, IV-A) interrupt the
+reading flow and make the paper difficult to read.
+
+
+4)  figure 1 does not include weather, Vehicle.TotalNumber,
+or TrafficLights.States.
+
+5) the paper references analyses that are not clearly
+reported:
+
+- Section IV-A claims to present "prevalence of list-valued
+attributes (e.g., Vehicles.Types,
+Visibility.SpecificImpairments) via micro-averaged support
+counts,” but these results do not appear in the text.
+
+- Section IV-B states that "We also report summary
+statistics (median, interquartile range) to characterize
+the concentration of difficulty and to aid stratified
+sampling." are reported, but these statistics are not
+shown.
+
+
+6) section V-A contains detailed training descriptions that
+are uncommon in the main text of a scientific paper. Such
+material is better placed in an appendix or provided in the
+code repository.
+
+7) section V reads more like a technical report rather than
+a result and discussion section of a scientific paper. It
+lacks analytical depth and does not interpret the findings
+in a broader scientific context.
+
+8) section V-C is descriptive and does not offer a critical
+discussion of the results.
+
+9) statements such as “These artifacts are committed
+alongside the code,” repeated throughout the manuscript,
+are uncommon in scientific writing and further contribute
+to a technical-report style. 
+
+10) what is the impact of the lack of temporal context in
+the scene evaluation?
+ 	 	The attached video is edited in a way that makes the
+context and purpose hard to follow. If possible, provide a
+clearer version or a bit more information about what it’s
+intended to show. 
+4 	6683 	Your work addresses a meaningful gap in existing autonomous
+driving dataset. Despite providing the Drive Scene
+Analyzer, the dataset and the accompanying code are not
+provided. It also fails to clearly describe how the
+pipeline, the knowledge base, and the severity definition
+were derived. The VLM-based pipeline considers
+human-in-the-loop correction, but seems to be error-prone.
+
+Remarks:
+- The dataset and code are missing.
+- How were the frames from the datasets selected? The
+distribution of scenes and time of day (Fig. 1) is clearly
+unbalanced. Could this be mitigated by a different sampling
+strategy?
+- How were the categories of the knowledge base and the
+severity definition derived? The choices seem reasonable
+but are not supported by any literature.
+- Are the categories of the knowledge base sufficient to
+train VLMs for high-level scene understanding?
+- Some sections seem very short (e.g., III-B, III-E).
+Consider reworking the structure.
+- I prompted some frames with the provided Drive Scene
+Analyzer and observed errors in the labels (e.g., vehicles
+detected although no vehicles were present in the scene).
+Human checks seem to be necessary for each frame.
+- Are there any related pipelines to provide such labels?
+For example, a quick search lead me to this work:  Esteban
+Rivera, Jannik Lübberstedt, Nico Uhlemann, Markus Lienkamp,
+"Scenario Understanding of Traffic Scenes Through Large
+Visual Language Models", Proceedings of the Winter
+Conference on Applications of Computer Vision (WACV)
+Workshops, 2025, pp. 1037-1045 
+- IV-B: Where are the summary statistics reported?
+- IV-B: Daylight dominance is not limited to some sources.
+- V-A: You start with (a), but no other elements follow.
+- V-A (a): Are these launch commands really relevant to
+include in the paper? They should be moved to the dataset
+documentation.
+- Table IV: Is the validation split truly human-provided
+ground truth? Is each frame in the validation dataset
+checked by a human? 

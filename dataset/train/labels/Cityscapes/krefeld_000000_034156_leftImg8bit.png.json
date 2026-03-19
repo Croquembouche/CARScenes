@@ -5,24 +5,23 @@
   "RoadConditions": "Dry",
   "LaneInformation": {
     "NumberOfLanes": "MultipleLanes",
-    "LaneMarkings": "Present",
+    "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "Bike Lane"
     ]
   },
   "TrafficSigns": {
     "TrafficSignsTypes": [
-      "Traffic Light",
-      "Bicycle Crossing"
+      "Traffic Light"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Sedan",
-      "SUV"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Sedan",
+      "SUV"
+    ],
     "InMotion": [
       "True"
     ],
@@ -31,12 +30,8 @@
     ]
   },
   "Pedestrians": [
-    "Standing"
+    "NoPed"
   ],
-  "Bicyclist": {
-    "Presence": "True",
-    "Location": "Crossing"
-  },
   "Directionality": "Two-Way",
   "Visibility": {
     "General": "Good",

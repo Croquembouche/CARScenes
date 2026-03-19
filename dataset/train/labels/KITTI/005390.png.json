@@ -8,22 +8,21 @@
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "Bike Lane",
-      "Tram Tracks",
-      "Bus Stop Sign"
+      "Tram Tracks"
     ]
   },
   "TrafficSigns": {
     "TrafficSignsTypes": [
       "Bus Stop Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Truck",
-      "Trolley"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Truck",
+      "Trolley"
+    ],
     "InMotion": [
       "True"
     ],

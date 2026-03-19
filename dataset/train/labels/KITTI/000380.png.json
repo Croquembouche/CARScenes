@@ -13,18 +13,18 @@
   },
   "TrafficSigns": {
     "TrafficSignsTypes": [
-      "No Entry",
+      "No Entry Sign",
       "Directional Arrow"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "Sedan",
       "Bus",
       "Utility Truck"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+    ],
     "InMotion": [
       "True"
     ],
@@ -36,10 +36,6 @@
   "Pedestrians": [
     "Crossing Street"
   ],
-  "Bicyclist": {
-    "Presence": "True",
-    "Location": "In Vehicle Lane"
-  },
   "Directionality": "Multi-directional with median",
   "Visibility": {
     "General": "Good",
@@ -49,7 +45,7 @@
   },
   "Ego-Vehicle": {
     "Direction": "EgoForward",
-    "Maneuver": "EgoProceeding through intersection"
+    "Maneuver": "EgoProceeding through Intersection"
   },
   "CameraCondition": "Clear",
   "Severity": 6

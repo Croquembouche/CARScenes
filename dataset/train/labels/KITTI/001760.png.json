@@ -11,18 +11,17 @@
     ]
   },
   "TrafficSigns": {
-    "TrafficLightState": null,
     "TrafficSignsTypes": [
       "No Parking"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Hatchback",
-      "Tram"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Hatchback",
+      "Tram"
+    ],
     "InMotion": [
       "True"
     ],

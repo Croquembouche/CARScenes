@@ -15,14 +15,14 @@
       "Merge Sign",
       "Speed Limit"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Compact Car",
-      "Sedan"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Compact Car",
+      "Sedan"
+    ],
     "InMotion": [
       "True"
     ],

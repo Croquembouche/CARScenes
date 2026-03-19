@@ -14,15 +14,15 @@
   "TrafficSigns": {
     "TrafficSignsTypes": [
       "Do Not Enter",
-      "One-Way"
+      "One Way Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Sedan"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Sedan"
+    ],
     "InMotion": [
       "True"
     ],

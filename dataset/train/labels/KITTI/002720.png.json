@@ -1,5 +1,5 @@
 {
-  "Scene": "Bridge",
+  "Scene": "Under Bridge",
   "TimeOfDay": "Daytime",
   "Weather": "Clear",
   "RoadConditions": "Dry",
@@ -14,14 +14,14 @@
     "TrafficSignsTypes": [
       "NoTrafficSigns"
     ],
-    "TrafficSignsVisibility": "SignNotVisible",
-    "VehicleTypes": [
-      "Bus",
-      "Sedan"
-    ]
+    "TrafficSignsVisibility": "SignNotVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Bus",
+      "Sedan"
+    ],
     "InMotion": [
       "True"
     ],

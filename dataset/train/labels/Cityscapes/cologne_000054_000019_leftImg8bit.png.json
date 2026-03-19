@@ -15,15 +15,15 @@
     "TrafficSignsTypes": [
       "Parking Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "Sedan",
       "Convertible",
       "Scooter"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+    ],
     "InMotion": [
       "False"
     ],
@@ -34,10 +34,6 @@
   "Pedestrians": [
     "Crossing Street"
   ],
-  "Bicyclist": {
-    "Presence": "True",
-    "Location": "In Vehicle Lane"
-  },
   "Directionality": "Two-Way",
   "Visibility": {
     "General": "Good",
@@ -46,7 +42,7 @@
     ]
   },
   "Ego-Vehicle": {
-    "Direction": "EgoStopped at Crosswalk",
+    "Direction": "EgoStopped",
     "Maneuver": "EgoFullStopped"
   },
   "CameraCondition": "Clear",

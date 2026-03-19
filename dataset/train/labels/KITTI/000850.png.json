@@ -15,17 +15,17 @@
       "Merge Sign",
       "Exit Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "Sedan",
       "Van",
       "Truck",
       "Commercial Delivery Truck",
-      "Trailer"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+      "Semi-Trailer Truck"
+    ],
     "InMotion": [
       "True"
     ],

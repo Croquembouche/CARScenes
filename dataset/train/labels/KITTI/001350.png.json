@@ -16,14 +16,14 @@
       "Directional Arrow",
       "Road Work"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Sedan",
-      "Hatchback"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Sedan",
+      "Hatchback"
+    ],
     "InMotion": [
       "True"
     ],
@@ -38,7 +38,7 @@
   "Visibility": {
     "General": "Good",
     "SpecificImpairments": [
-      "Glare"
+      "Camera Glare"
     ]
   },
   "Ego-Vehicle": {

@@ -4,7 +4,7 @@
   "Weather": "Overcast",
   "RoadConditions": "Wet",
   "LaneInformation": {
-    "NumberOfLanes": "One",
+    "NumberOfLanes": "1",
     "LaneMarkings": "LaneVisible",
     "SpecialLanes": [
       "Crosswalk",
@@ -17,14 +17,14 @@
       "Right Lane Must Turn Right",
       "Left Lane Must Turn Left"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "RV",
-      "Sedan"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "RV",
+      "Sedan"
+    ],
     "InMotion": [
       "True"
     ],

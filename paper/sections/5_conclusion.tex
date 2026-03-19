@@ -1,0 +1,6 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+We reframed CARScenes as an annotation-only dataset and benchmark for structured scene understanding and failure analysis in autonomous driving rather than as a control-oriented or VLA resource. The current canonical release contains 5,192 validated records, a stable schema, fixed split manifests, reusable slice definitions, Croissant metadata, and executable release QA tooling. Its scientific role is to make scene-level failures easy to measure, query, and compare across Argoverse1, Cityscapes, KITTI, and nuScenes.
+
+The released benchmark is built from a VLM-assisted workflow followed by full human correction, so the final CARScenes records should be interpreted as human-reviewed ground truth rather than as raw model output. The next scientific step is therefore broader benchmark coverage rather than basic label verification: more baselines, more slice-wise reporting, and stronger comparative evidence that CARScenes reveals failures hidden by coarse source metadata alone.

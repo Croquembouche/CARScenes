@@ -5,22 +5,22 @@
   "RoadConditions": "Dry",
   "LaneInformation": {
     "NumberOfLanes": "NoLane",
-    "LaneMarkings": "Not Visible",
+    "LaneMarkings": "LaneNotVisible",
     "SpecialLanes": [
-      "Pedestrian Walkway"
+      "Crosswalk"
     ]
   },
   "TrafficSigns": {
     "TrafficSignsTypes": [
       "NoTrafficSigns"
     ],
-    "TrafficSignsVisibility": "SignNotVisible",
-    "VehicleTypes": [
-      "SUV"
-    ]
+    "TrafficSignsVisibility": "SignNotVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "SUV"
+    ],
     "InMotion": [
       "False"
     ],
@@ -29,7 +29,7 @@
     ]
   },
   "Pedestrians": [
-    "Many Walking"
+    "NoPed"
   ],
   "Directionality": "Unknown",
   "Visibility": {

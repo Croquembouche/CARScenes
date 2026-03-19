@@ -14,14 +14,14 @@
     "TrafficSignsTypes": [
       "Do Not Enter"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Motorcycle",
-      "SUV"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "Few",
+    "VehicleTypes": [
+      "Motorcycle",
+      "SUV"
+    ],
     "InMotion": [
       "False"
     ],

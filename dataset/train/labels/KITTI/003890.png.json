@@ -13,18 +13,17 @@
   },
   "TrafficSigns": {
     "TrafficSignsTypes": [
-      "Bike Lane Sign",
-      "Direction Sign"
+      "Bike Lane Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
+    "TrafficSignsVisibility": "SignVisible"
+  },
+  "Vehicles": {
+    "TotalNumber": "MultipleVehicles",
     "VehicleTypes": [
       "Sedan",
       "Truck",
       "Tram"
-    ]
-  },
-  "Vehicles": {
-    "TotalNumber": "MultipleVehicles",
+    ],
     "InMotion": [
       "True"
     ],

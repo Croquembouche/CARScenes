@@ -1,0 +1,139 @@
+\section{Related Work}
+
+% Semantic understanding of driving environments has traditionally relied on richly annotated datasets collected from real-world autonomous driving scenarios. In this section, we review prior work in autonomous vehicle datasets, vision-language annotation efforts, and semantic representations for driving scenes. We also highlight the unique position \textit{DriveGraph} occupies in enabling symbolic, label-efficient reasoning.
+
+% \subsection{Autonomous Vehicle Datasets}
+
+% Numerous large-scale datasets have been proposed to support autonomous vehicle (AV) research, including KITTI, Argoverse 1 \& 2, nuScenes, Lyft Level5, and the Waymo Open Dataset. These datasets offer multimodal sensor streams such as RGB images, LiDAR, GPS/IMU, and radar, along with dense ground-truth annotations for 3D bounding boxes, trajectories, and semantic maps. They have become the de facto benchmarks for evaluating perception and localization tasks, including object detection, tracking, depth estimation, and sensor fusion.
+
+% However, these datasets are designed primarily for low-level, pixel-aligned vision tasks. They emphasize object-centric annotations and rarely encode high-level contextual semantics such as weather, risk, or traffic complexity. For instance, while nuScenes provides a few global metadata fields (e.g., weather, time of day), these are limited in granularity and are not leveraged as reasoning primitives. Consequently, these datasets fall short for tasks involving symbolic reasoning, scenario abstraction, or semantic graph analysis.
+
+% Cityscapes and BDD100K provide pixel-level semantic segmentation for dense driving scenes and support downstream tasks such as lane detection and drivable area estimation. BDD-X introduces explanations in natural language, but they are noisy, unstructured, and not grounded in graph representations. Collectively, these datasets require extensive manual labeling efforts and offer limited support for label-efficient research or structured semantic querying.
+
+% \subsection{Vision-Language Annotation for Driving}
+
+% \begin{table*}[ht]
+% \centering
+% \caption{VLM analysis F1-score and inference Time (s). The ground truth is provided by an human annotator.}
+% \begin{adjustbox}{max width=\textwidth}
+% \begin{tabular}{lccccccccccccccccc}
+% \toprule
+% \textbf{} & \textbf{Scene} & \textbf{Time} & \textbf{Weather} & \textbf{Road} & \textbf{Lane} & \textbf{Signs} & \textbf{Vehicles} & \textbf{Peds}  & \textbf{Dir.} & \textbf{Ego} & \textbf{Vis.} & \textbf{Camera} & \textbf{Severity} & \textbf{Processing Time}\\
+% \midrule
+% \textbf{ChatGPT-4o} & 
+% 0.98 & 0.99 & 0.95 & 0.99 &
+% 0.95 & 0.95 & 0.99 & 0.98 & 0.93 &
+% 0.93 & 0.99 & 0.98 & 0.99 & 45.63s\\
+% \hline
+% \textbf{Qwen2-VL-2B-INS} & 
+% 0.71 & 0.99 & 0.74 & 0.99 & 0.75 & 0.76 & 0.67 & 0.81 & 0.88 & 0.75 & 0.96 & 0.99 & 0.40 & 44.58s\\
+% % \hline
+% % \textbf{Qwen3.5-32B} & 
+% % 0.92 & 0.99 & 0.93 & 0.99 & 0.89 & 0.82 & 0.86 & 0.95 & 0.90 & 0.91 & 0.97 & 0.99 & 0.85 & 62.37s\\
+% \bottomrule
+% \label{tab:llmvshuman}
+% \end{tabular}
+% \end{adjustbox}
+% \end{table*}
+
+% As large vision-language models (VLMs) like GPT-4o, BLIP-2, and LLaVA gain traction, several works have investigated their use for reducing the cost and complexity of dataset annotation. Recent approaches have demonstrated the feasibility of using LLMs to generate free-text driving scene descriptions, provide narrations, or classify coarse scene categories. Examples include DriveLM, which formulates control-relevant questions to elicit reasoning from language models, and LLaVA-based driving scene explanations.
+
+% These efforts demonstrate promising potential, but they remain limited in structure and consistency. Outputs are often open-ended, difficult to normalize, and not directly interpretable or indexable. Moreover, there is little standardization across prompts or schemas, which makes it challenging to support downstream querying or formal analysis. While these models can capture rich semantics, they require a scaffolded schema to become truly useful for scene-level understanding.
+
+% \textit{DriveGraph} builds upon these developments by imposing a normalized scene graph schema with 23 attributes relevant to AV scenarios. Unlike free-form captioning or QA pipelines, \textit{DriveGraph} produces structured graphs with consistent vocabulary, enabling formal operations such as graph matching, clustering, and symbolic filtering. This makes the dataset both scalable and analytically tractable for semantic reasoning.
+
+% \subsection{Scene Graphs and Semantic Reasoning}
+
+% Scene graphs have a long history in computer vision as a means of capturing spatial relationships between objects in an image. Benchmarks like Visual Genome, VRD, RefCOCO, and GQA have fueled research in visual reasoning, relational understanding, and object grounding. However, these datasets focus on general images, often involving household or daily-life contexts, and do not align with the structured demands of AV safety research.
+
+% Moreover, conventional scene graphs are typically object-centric and predicate-focused (e.g., ``car next to person''), rather than contextually rich in environment-level attributes. They lack representations for high-level scene elements like lighting, occlusion, or ego-motion. As a result, their utility for autonomous driving applications—especially safety-critical tasks like scenario mining or risk stratification—is limited.
+
+% \textit{DriveGraph} reinterprets the concept of a scene graph for the AV domain. Instead of focusing on objects and relationships, it encodes co-occurrence graphs over semantic attributes that describe the scene context (e.g., weather, visibility, road structure, vehicle count, pedestrian presence, etc.). This symbolic structure supports graph-theoretic reasoning and allows for interpretable scene comparison at scale.
+
+% \subsection{Scenario Mining and Risk-Based Evaluation}
+
+% Autonomous vehicle development increasingly relies on identifying and covering rare or risky scenarios. Works like RiskBench, Scenic, and GRIQA focus on risk modeling by combining simulation and logic-based scene definitions. Other datasets such as DReyeVE and DeepScenario emphasize driver attention, behavioral prediction, or failure-critical events. These datasets, however, often require access to fine-grained trajectory labels, map context, or simulation environments.
+
+% While valuable, these approaches are difficult to scale due to the cost of generating or simulating risky behaviors. They also typically require downstream supervision, including accident reports, intervention logs, or safety driver feedback. In contrast, \textit{DriveGraph} provides a lightweight alternative for scenario mining by using vision-language models to assign risk labels based on contextual attributes alone.
+
+% By offering symbolic risk categorization and rich semantic graphs, \textit{DriveGraph} enables new forms of curriculum design, safety filtering, and test suite generation. Its design is particularly suited to label-efficient workflows and aligns with recent trends in data-centric AV development.
+
+% Requires: \usepackage{booktabs}
+\begin{table*}[t]
+\scriptsize
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{
+  >{\raggedleft\arraybackslash}m{1.9cm}|
+  >{\centering\arraybackslash}m{2.6cm}|
+  >{\centering\arraybackslash}m{3.2cm}|
+  >{\centering\arraybackslash}m{3.0cm}|
+  >{\centering\arraybackslash}m{2.6cm}|
+  >{\centering\arraybackslash}m{3.0cm}
+}
+\toprule
+\makecell[r]{\textbf{Dataset}\\\textbf{(year)}} &
+\makecell[c]{\textbf{Modality}} &
+\makecell[c]{\textbf{Language}\\\textbf{supervision}} &
+\makecell[c]{\textbf{Scale}} &
+\makecell[c]{\textbf{Provenance}} &
+\makecell[c]{\textbf{Release}\\\textbf{type}} \\
+\midrule
+\makecell[r]{\textbf{CARScenes}\\\textbf{(our work)}} &
+\makecell[c]{Single RGB\\frames} &
+\makecell[c]{Structured scene KB\\(28 keys; Severity)} &
+\makecell[c]{5{,}192 frames\\4{,}592/500/100\\train/dev/audit-cand.} &
+\makecell[c]{Argoverse1, Cityscapes,\\KITTI, nuScenes} &
+\makecell[c]{Annotation-only JSONL\\schema+validator+splits} \\
+\midrule
+\makecell[r]{Talk2Car~\cite{RefWorks:deruyttere2019talk2car}\\(2019)} &
+\makecell[c]{Front camera\\(nuScenes)} &
+\makecell[c]{Commands with bbox\\(grounding)} &
+\makecell[c]{8{,}349/1{,}163/\\2{,}447 cmds} &
+\makecell[c]{nuScenes} &
+\makecell[c]{Text + boxes\\on nuScenes} \\
+\midrule
+\makecell[r]{nuScenes-QA~\cite{RefWorks:qian2024nuscenesqa}\\(AAAI'24)} &
+\makecell[c]{Multi-modal,\\multi-frame} &
+\makecell[c]{Programmatic VQA\\pairs} &
+\makecell[c]{$\sim$460K QAs\\over $\sim$34K scenes} &
+\makecell[c]{nuScenes} &
+\makecell[c]{Benchmark\\code + data} \\
+\midrule
+\makecell[r]{NuInstruct~\cite{RefWorks:ding2024holistic}\\(CVPR'24)} &
+\makecell[c]{Multi-view\\video} &
+\makecell[c]{Instruction--response\\(17 subtasks)} &
+\makecell[c]{91K\\video--QA pairs} &
+\makecell[c]{nuScenes\\(multi-view)} &
+\makecell[c]{Annotations\\+ loaders} \\
+\midrule
+\makecell[r]{DriveLM-Data~\cite{RefWorks:sima2024drivelm}\\(ECCV'24)} &
+\makecell[c]{Multi-view images/\\video} &
+\makecell[c]{Graph-structured QA\\(P3: perc/pred/plan)} &
+\makecell[c]{n/a} &
+\makecell[c]{nuScenes\\+ CARLA} &
+\makecell[c]{Dataset\\+ eval server} \\
+\midrule
+\makecell[r]{BDD-X~\cite{RefWorks:kim2018textual}\\(2018)} &
+\makecell[c]{Video} &
+\makecell[c]{Action descriptions\\+ explanations} &
+\makecell[c]{6{,}970 videos; 77 h\\$\sim$26K activities} &
+\makecell[c]{BDD} &
+\makecell[c]{Explanations\\dataset} \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\vspace{0.1cm}
+\caption{Related driving VLM datasets compared to \textbf{CARScenes}.}
+\label{tab:related_datasets}
+\end{table*}
+
+
+
+\textit{Autonomous-driving datasets.} KITTI, Cityscapes, BDD100K, Argoverse, nuScenes, Lyft Level 5, and Waymo Open provide multimodal data with object/pixel-aligned labels for detection, tracking, and mapping. These corpora include limited, coarse scene metadata and are not designed for schema-consistent scene-level semantics. CARScenes complements them by releasing annotation-only JSONL scene annotations, schema files, and fixed split manifests for interpretable analysis rather than raw-image redistribution.
+
+\textit{Vision–language for driving.} BDD-X, Talk2Car, DriveLM/DriveLM-Data, NuInstruct, nuScenes-QA, and recent traffic-scene VLM studies such as Rivera \emph{et al.} \cite{RefWorks:rivera2025scenario} pair scenes with free-form text, QA, or direct model analysis. While powerful, supervision and vocabularies are heterogeneous. CARScenes instead offers a versioned, fixed schema enabling consistent querying, benchmark slicing, and cross-dataset comparison.
+
+\textit{Scene graphs \& risk corpora.} Visual Genome~\cite{RefWorks:krishna2017visual}, RefCOCO~\cite{RefWorks:chen2025revisiting}, and GQA~\cite{RefWorks:hudson2019gqa} probe general-image relations/referring or VQA~\cite{RefWorks:antol2015vqa}, while Scenic~\cite{RefWorks:fremont2019scenic}, RiskBench~\cite{RefWorks:kung2024riskbench}, DReyeVE~\cite{RefWorks:alletto2016dr}, and DeepScenario~\cite{RefWorks:lu2023deepscenario} center on simulators, trajectories, or attention. None of these resources provides a per-image, driving-specific semantic schema grounded directly in real images and packaged as an annotation-only benchmark with fixed scene slices. CARScenes addresses this gap by combining schema-aligned annotations with a reproducible release and evaluation interface.

@@ -14,14 +14,14 @@
     "TrafficSignsTypes": [
       "Parking Sign"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Bus",
-      "Sedan"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Bus",
+      "Sedan"
+    ],
     "InMotion": [
       "True"
     ],
@@ -31,7 +31,7 @@
     ]
   },
   "Pedestrians": [
-    "Walking on Sidewalk"
+    "Visible on Sidewalk"
   ],
   "Directionality": "Two-Way",
   "Visibility": {

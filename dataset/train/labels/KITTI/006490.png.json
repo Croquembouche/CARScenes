@@ -16,14 +16,14 @@
       "Bike Lane Sign",
       "Directional Arrow"
     ],
-    "TrafficSignsVisibility": "Visible",
-    "VehicleTypes": [
-      "Delivery Truck",
-      "Sedan"
-    ]
+    "TrafficSignsVisibility": "SignVisible"
   },
   "Vehicles": {
     "TotalNumber": "MultipleVehicles",
+    "VehicleTypes": [
+      "Delivery Truck",
+      "Sedan"
+    ],
     "InMotion": [
       "True"
     ],

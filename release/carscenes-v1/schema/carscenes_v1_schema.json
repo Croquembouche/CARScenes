@@ -1,0 +1,507 @@
+{
+  "name": "carscenes-v1",
+  "version": "1.0.0",
+  "required_top_level": [
+    "_id",
+    "_source",
+    "_image_relpath",
+    "_raw_label_relpath",
+    "_record_hash",
+    "Scene",
+    "TimeOfDay",
+    "Weather",
+    "RoadConditions",
+    "LaneInformation",
+    "TrafficSigns",
+    "Vehicles",
+    "Pedestrians",
+    "Directionality",
+    "Visibility",
+    "Ego-Vehicle",
+    "CameraCondition",
+    "Severity"
+  ],
+  "properties": {
+    "Scene": {
+      "type": "string",
+      "enum": [
+        "Urban",
+        "Suburban",
+        "Highway",
+        "Residential",
+        "Commercial",
+        "Intersection",
+        "Parking Area",
+        "Construction",
+        "School Zone",
+        "Industrial",
+        "Unknown",
+        "Rural",
+        "Under Bridge"
+      ]
+    },
+    "TimeOfDay": {
+      "type": "string",
+      "enum": [
+        "Daytime",
+        "Dusk/Dawn",
+        "Nighttime"
+      ]
+    },
+    "Weather": {
+      "type": "string",
+      "enum": [
+        "Sunny",
+        "Clear",
+        "Rainy",
+        "Overcast",
+        "Cloudy",
+        "Partly Cloudy",
+        "Not Indicated"
+      ]
+    },
+    "RoadConditions": {
+      "type": "string",
+      "enum": [
+        "Dry",
+        "Wet"
+      ]
+    },
+    "Directionality": {
+      "type": "string",
+      "enum": [
+        "One-Way",
+        "Two-Way",
+        "Multi-directional with median",
+        "Divided",
+        "Roundabout",
+        "Unknown"
+      ]
+    },
+    "CameraCondition": {
+      "type": "string",
+      "enum": [
+        "Clear",
+        "Dirty",
+        "SnowOnLens",
+        "DirtOnLens",
+        "RainOnLens",
+        "Glare"
+      ]
+    },
+    "Severity": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 10
+    },
+    "LaneInformation": {
+      "type": "object",
+      "required": [
+        "NumberOfLanes",
+        "LaneMarkings",
+        "SpecialLanes"
+      ],
+      "properties": {
+        "NumberOfLanes": {
+          "type": "string",
+          "enum": [
+            "NoLane",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "MultipleLanes"
+          ]
+        },
+        "LaneMarkings": {
+          "type": "string",
+          "enum": [
+            "LaneVisible",
+            "LaneNotVisible",
+            "LaneNotClearlyVisible"
+          ]
+        },
+        "SpecialLanes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "NoSpecialLanes",
+              "Bike Lane",
+              "Taxi and Bus Lane",
+              "Center Lane",
+              "Right Turn Only Lane",
+              "Forward Only Lane",
+              "Left Turn Only Lane",
+              "Street Parking",
+              "Tram Tracks",
+              "HOV Lane",
+              "Crosswalk",
+              "Road Work",
+              "Traffic Cones Blocking Parts of the Road",
+              "Bridge",
+              "Roundabout",
+              "Construction Cones",
+              "Construction Barriers",
+              "Bus Stop"
+            ]
+          }
+        }
+      }
+    },
+    "TrafficSigns": {
+      "type": "object",
+      "required": [
+        "TrafficSignsTypes",
+        "TrafficSignsVisibility"
+      ],
+      "properties": {
+        "TrafficSignsTypes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "Bus Lane",
+              "Tow Area Sign",
+              "Fallen Sign",
+              "Do Not Enter",
+              "Crosswalk Closed",
+              "Crosswalk",
+              "Curve",
+              "Yield to Pedestrians",
+              "Speed Limit",
+              "Dead End",
+              "No Parking",
+              "Parking Sign",
+              "Traffic Light",
+              "Traffic Light Warning Sign",
+              "Detour",
+              "Bus Stop Sign",
+              "Tram Sign",
+              "Pedestrian Crossing",
+              "Pedestrian Signal",
+              "Pedestrian Warning",
+              "Stop for Pedestrians",
+              "No Pavement Markings",
+              "Stop Sign",
+              "Exit Sign",
+              "Merge Sign",
+              "Speed Bump",
+              "Electronic Sign",
+              "Road Work",
+              "Street Sign",
+              "Speeding Fine Doubled",
+              "Double Fines End",
+              "Work Zone",
+              "No Left Turn",
+              "Left Turn Only",
+              "No Right Turn",
+              "Right Turn Only",
+              "Not a Thru Street",
+              "Right Lane Must Turn Right",
+              "Left Lane Must Turn Left",
+              "School Zone",
+              "Railroad Crossing",
+              "Do Not Stop on Tracks",
+              "Do Not Block",
+              "Do Not Block Intersection",
+              "No Stopping",
+              "No Turn On Red",
+              "No Trucks Allowed",
+              "No U-Turn",
+              "Route Sign",
+              "One Way Sign",
+              "Share the Road",
+              "Road Work Ahead",
+              "Road Closed",
+              "NoTrafficSigns",
+              "Two-Way Traffic",
+              "Construction Warning",
+              "Yield Sign",
+              "Bike Lane Sign",
+              "Weight Limit",
+              "Directional Arrow",
+              "Information Sign",
+              "No Pedestrian Crossing",
+              "End Road Work",
+              "Bike Lane Ends",
+              "Keep Right Sign",
+              "Loading Zone Sign",
+              "Emergnecy Route",
+              "Gas Station Sign",
+              "Height Limit",
+              "Hospital Sign",
+              "Intersection Warning",
+              "No Entry Sign",
+              "Pedestrian Only Zone",
+              "Roundabout Sign",
+              "Tunnel Sign"
+            ]
+          }
+        },
+        "TrafficSignsVisibility": {
+          "type": "string",
+          "enum": [
+            "SignVisible",
+            "SignNotVisible",
+            "SignNotClearlyVisible",
+            "SignNotIndicated"
+          ]
+        },
+        "TrafficLightState": {
+          "type": "string",
+          "enum": [
+            "Red",
+            "Green",
+            "Yellow",
+            "In Transition(NoState)",
+            "In Transition(TwoState)",
+            "Broken(NoState)"
+          ]
+        }
+      }
+    },
+    "Vehicles": {
+      "type": "object",
+      "required": [
+        "TotalNumber",
+        "VehicleTypes",
+        "InMotion",
+        "States"
+      ],
+      "properties": {
+        "TotalNumber": {
+          "type": "string",
+          "enum": [
+            "NoVehicle",
+            "One",
+            "Few",
+            "MultipleVehicles"
+          ]
+        },
+        "VehicleTypes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "Containers",
+              "SUV",
+              "Truck",
+              "Pickup Truck",
+              "Semi-Trailer Truck",
+              "Sedan",
+              "Bus",
+              "Cars",
+              "Van",
+              "Hatchback",
+              "Sports Car",
+              "Construction Vehicles",
+              "Cement Mixer Truck",
+              "Utility Truck",
+              "Delivery Truck",
+              "Commercial Delivery Truck",
+              "Police Car",
+              "Service Vehicle",
+              "Commercial Vehicle",
+              "Taxi",
+              "Convertible",
+              "Crossover",
+              "Motorcycle",
+              "Box Truck",
+              "Station Wagon",
+              "Minivan",
+              "Biodiesel Vehicle",
+              "Commerical Truck",
+              "Coupe",
+              "Trolley",
+              "Compact Car",
+              "Forklift",
+              "Armored Truck",
+              "Ambulance",
+              "Shuttle Bus",
+              "Jeep",
+              "RV",
+              "Scooter",
+              "Tram"
+            ]
+          }
+        },
+        "InMotion": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "True",
+              "False"
+            ]
+          }
+        },
+        "States": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "Parked",
+              "In Motion",
+              "Stopped",
+              "Merging",
+              "In Queue",
+              "Door Open",
+              "Violate Traffic Rules",
+              "Waiting to Turn Right",
+              "Picking up a Passenger",
+              "Interacting with Driver",
+              "Passenger Exiting",
+              "Overtaking",
+              "Stopped at Intersection",
+              "Stopped at Traffic Light",
+              "Blocking Parts of the Road",
+              "Turning Left",
+              "Turning Right",
+              "Turning",
+              "Waiting to Turn Left",
+              "Waiting to Turn Right",
+              "Waiting",
+              "Waiting to Turn",
+              "Utility Work",
+              "Performing Roadwork",
+              "Stopped at Crosswalk",
+              "Crossing Intersection",
+              "Exiting Intersection",
+              "Loading",
+              "Slowing Down"
+            ]
+          }
+        }
+      }
+    },
+    "Pedestrians": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "NoPed",
+          "MultiplePed",
+          "Visible on Sidewalk",
+          "Crossing Street",
+          "Boarding Bus",
+          "Waiting at Bus Stop",
+          "Interacting with Vehicle",
+          "Wheelchair on the Street",
+          "Wheelchair on the Sidewalk"
+        ]
+      }
+    },
+    "Visibility": {
+      "type": "object",
+      "required": [
+        "General",
+        "SpecificImpairments"
+      ],
+      "properties": {
+        "General": {
+          "type": "string",
+          "enum": [
+            "Good",
+            "Reduced",
+            "Limited",
+            "Poor"
+          ]
+        },
+        "SpecificImpairments": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "Camera Glare",
+              "Obstructed",
+              "Shadows",
+              "Reduced",
+              "NoImpairments",
+              "Obstructed by Rain",
+              "Reflections"
+            ]
+          }
+        }
+      }
+    },
+    "Ego-Vehicle": {
+      "type": "object",
+      "required": [
+        "Direction",
+        "Maneuver"
+      ],
+      "properties": {
+        "Direction": {
+          "type": "string",
+          "enum": [
+            "EgoStopped",
+            "EgoForward",
+            "EgoMaking a Left Turn",
+            "EgoMaking a Right Turn",
+            "EgoStopped at Intersection",
+            "EgoStopped at Stop Sign",
+            "EgoApproaching Intersection",
+            "EgoMerging",
+            "EgoExiting Roundabout",
+            "EgoEntering Roundabout",
+            "EgoApproaching Roundabout",
+            "EgoExiting Highway",
+            "EgoParked"
+          ]
+        },
+        "Maneuver": {
+          "type": "string",
+          "enum": [
+            "EgoWaiting",
+            "EgoFullStopped",
+            "EgoStopped in Parking Space",
+            "EgoTurning Right",
+            "EgoTurning Left",
+            "EgoMerging Left",
+            "EgoMerging Right",
+            "EgoSlowing Down",
+            "EgoTurning",
+            "EgoYielding",
+            "EgoMoving",
+            "EgoFollowing",
+            "EgoIn Queue",
+            "EgoMerging",
+            "EgoProceeding through Intersection",
+            "EgoOvertaking on Opposing Lane",
+            "EgoOvertaking"
+          ]
+        }
+      }
+    }
+  },
+  "benchmark_fields": {
+    "scalar": [
+      "Scene",
+      "TimeOfDay",
+      "Weather",
+      "RoadConditions",
+      "Directionality",
+      "CameraCondition",
+      "Visibility.General",
+      "LaneInformation.NumberOfLanes",
+      "LaneInformation.LaneMarkings",
+      "TrafficSigns.TrafficSignsVisibility",
+      "TrafficSigns.TrafficLightState",
+      "Vehicles.TotalNumber",
+      "Ego-Vehicle.Direction",
+      "Ego-Vehicle.Maneuver",
+      "Severity"
+    ],
+    "list": [
+      "LaneInformation.SpecialLanes",
+      "TrafficSigns.TrafficSignsTypes",
+      "Vehicles.VehicleTypes",
+      "Vehicles.InMotion",
+      "Vehicles.States",
+      "Pedestrians",
+      "Visibility.SpecificImpairments"
+    ]
+  }
+}
