@@ -1,3 +1,39 @@
+---
+license: cc-by-4.0
+pretty_name: CARScenes
+tags:
+  - autonomous-driving
+  - vision-language
+  - scene-understanding
+  - benchmark
+  - croissant
+task_categories:
+  - image-classification
+  - visual-question-answering
+language:
+  - en
+size_categories:
+  - 1K<n<10K
+configs:
+  - config_name: default
+    default: true
+    data_files:
+      - split: train
+        path: release/carscenes-v1/splits/train.jsonl
+      - split: validation
+        path: release/carscenes-v1/splits/dev-500.jsonl
+      - split: test
+        path: release/carscenes-v1/splits/gold-test-100.jsonl
+  - config_name: full_release
+    data_files:
+      - split: train
+        path: release/carscenes-v1/data/carscenes_v1_records.jsonl
+  - config_name: agreement_subset
+    data_files:
+      - split: test
+        path: release/carscenes-v1/splits/gold-agreement-25.jsonl
+---
+
 # CARScenes
 
 CARScenes is an annotation-only dataset and benchmark for structured scene understanding and failure analysis in autonomous driving.
