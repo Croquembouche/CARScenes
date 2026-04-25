@@ -14,7 +14,7 @@
   },
   "split_counts": {
     "train": 4592,
-    "silver-dev-500": 500,
+    "dev-500": 500,
     "gold-test-100": 100,
     "gold-agreement-25": 25
   },
