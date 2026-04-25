@@ -114,7 +114,7 @@
       "@id": "carscenes-records",
       "name": "carscenes_v1_records.jsonl",
       "description": "Canonical CARScenes v1 annotation records in JSONL format.",
-      "contentUrl": "https://raw.githubusercontent.com/Croquembouche/CARScenes/main/release/carscenes-v1/data/carscenes_v1_records.jsonl",
+      "contentUrl": "https://raw.githubusercontent.com/Croquembouche/CARScenes/96847f2e3d4b6388454b4e92d850467331b4de97/release/carscenes-v1/data/carscenes_v1_records.jsonl",
       "encodingFormat": "application/jsonlines",
       "sha256": "badb1f77363d74f1c9850be58f43b73e697c03b8d66c8b47bfee6aef7d20fc33"
     },
@@ -123,7 +123,7 @@
       "@id": "carscenes-schema",
       "name": "carscenes_v1_schema.json",
       "description": "Machine-readable schema for the benchmark fields.",
-      "contentUrl": "https://raw.githubusercontent.com/Croquembouche/CARScenes/main/release/carscenes-v1/schema/carscenes_v1_schema.json",
+      "contentUrl": "https://raw.githubusercontent.com/Croquembouche/CARScenes/96847f2e3d4b6388454b4e92d850467331b4de97/release/carscenes-v1/schema/carscenes_v1_schema.json",
       "encodingFormat": "application/json",
       "sha256": "53c51006f601c3cab6623df202c8dc2f97039a0841dad8eaf10249ceaa154360"
     },
@@ -132,7 +132,7 @@
       "@id": "carscenes-train-split",
       "name": "train.jsonl",
       "description": "Training split manifest.",
-      "contentUrl": "https://raw.githubusercontent.com/Croquembouche/CARScenes/main/release/carscenes-v1/splits/train.jsonl",
+      "contentUrl": "https://raw.githubusercontent.com/Croquembouche/CARScenes/96847f2e3d4b6388454b4e92d850467331b4de97/release/carscenes-v1/splits/train.jsonl",
       "encodingFormat": "application/jsonlines",
       "sha256": "901415d301d6c82c3254b3bcf42eb2bf729f99843ee7152023c484c86682e904"
     },
@@ -141,7 +141,7 @@
       "@id": "carscenes-dev-split",
       "name": "dev-500.jsonl",
       "description": "Development split manifest for model selection.",
-      "contentUrl": "https://raw.githubusercontent.com/Croquembouche/CARScenes/main/release/carscenes-v1/splits/dev-500.jsonl",
+      "contentUrl": "https://raw.githubusercontent.com/Croquembouche/CARScenes/96847f2e3d4b6388454b4e92d850467331b4de97/release/carscenes-v1/splits/dev-500.jsonl",
       "encodingFormat": "application/jsonlines",
       "sha256": "3fb3c414a23f7343869e8c881f1fa29491ee65fd10386c7a95bd9ac7f9b0498e"
     },
@@ -150,7 +150,7 @@
       "@id": "carscenes-gold-test-split",
       "name": "gold-test-100.jsonl",
       "description": "Held-out benchmark split used for headline evaluation.",
-      "contentUrl": "https://raw.githubusercontent.com/Croquembouche/CARScenes/main/release/carscenes-v1/splits/gold-test-100.jsonl",
+      "contentUrl": "https://raw.githubusercontent.com/Croquembouche/CARScenes/96847f2e3d4b6388454b4e92d850467331b4de97/release/carscenes-v1/splits/gold-test-100.jsonl",
       "encodingFormat": "application/jsonlines",
       "sha256": "7f367700e314faa7e2f3dbd531a38db8413541ca734281170c5d756ee2a61f2a"
     },
@@ -159,7 +159,7 @@
       "@id": "carscenes-gold-agreement-split",
       "name": "gold-agreement-25.jsonl",
       "description": "Independent agreement subset drawn from the held-out benchmark split.",
-      "contentUrl": "https://raw.githubusercontent.com/Croquembouche/CARScenes/main/release/carscenes-v1/splits/gold-agreement-25.jsonl",
+      "contentUrl": "https://raw.githubusercontent.com/Croquembouche/CARScenes/96847f2e3d4b6388454b4e92d850467331b4de97/release/carscenes-v1/splits/gold-agreement-25.jsonl",
       "encodingFormat": "application/jsonlines",
       "sha256": "796bcfcf35a4e203f3cf93e48ae4eaf90725464af6eb0524cd1da9a090349b97"
     },
@@ -168,7 +168,7 @@
       "@id": "carscenes-release-readme",
       "name": "README.md",
       "description": "Release documentation.",
-      "contentUrl": "https://raw.githubusercontent.com/Croquembouche/CARScenes/main/release/carscenes-v1/README.md",
+      "contentUrl": "https://raw.githubusercontent.com/Croquembouche/CARScenes/96847f2e3d4b6388454b4e92d850467331b4de97/release/carscenes-v1/README.md",
       "encodingFormat": "text/markdown",
       "sha256": "eef78ecdef21f627d41ddbf1123e0e4198e79abea495d959987a5fcbf9ed4930"
     },
@@ -177,7 +177,7 @@
       "@id": "carscenes-licenses",
       "name": "LICENSES.md",
       "description": "License matrix for CARScenes release artifacts and upstream sources.",
-      "contentUrl": "https://raw.githubusercontent.com/Croquembouche/CARScenes/main/release/carscenes-v1/LICENSES.md",
+      "contentUrl": "https://raw.githubusercontent.com/Croquembouche/CARScenes/96847f2e3d4b6388454b4e92d850467331b4de97/release/carscenes-v1/LICENSES.md",
       "encodingFormat": "text/markdown",
       "sha256": "a8994f53f8c367e1894e226c1e26ba3804ac44ce5eaaa70b8aa327176f531ba7"
     }
